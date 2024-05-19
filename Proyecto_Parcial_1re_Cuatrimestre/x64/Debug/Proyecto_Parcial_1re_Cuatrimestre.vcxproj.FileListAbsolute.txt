@@ -1,0 +1,4 @@
+C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.vcxproj.AssemblyReference.cache
+C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.Form1.resources
+C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.vcxproj.GenerateResource.cache
+C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.FormRegister.resources
