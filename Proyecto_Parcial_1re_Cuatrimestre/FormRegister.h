@@ -36,33 +36,33 @@ namespace CppCLRWinFormsProject {
 		}
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ labelNombre;
-	private: System::Windows::Forms::TextBox^ inputNombre;
+	public: System::Windows::Forms::TextBox^ inputNombre;
 
 
 	private: System::Windows::Forms::Label^ labelApellido;
-	private: System::Windows::Forms::TextBox^ inputApellido;
+	public: System::Windows::Forms::TextBox^ inputApellido;
 
 
 	private: System::Windows::Forms::Label^ labelSector;
-	private: System::Windows::Forms::TextBox^ inputSector;
+	public: System::Windows::Forms::TextBox^ inputSector;
 
 
 	private: System::Windows::Forms::Label^ labelDNI;
-	private: System::Windows::Forms::TextBox^ inputDNI;
+	public: System::Windows::Forms::TextBox^ inputDNI;
 
 
 	private: System::Windows::Forms::Label^ labelContraseña;
-	private: System::Windows::Forms::TextBox^ inputContraseña;
+	public: System::Windows::Forms::TextBox^ inputContraseña;
 
 
 	private: System::Windows::Forms::Label^ labelDireccion;
-	private: System::Windows::Forms::TextBox^ inputDireccion;
+	public: System::Windows::Forms::TextBox^ inputDireccion;
 
 
 	private: System::Windows::Forms::Label^ labelLegajo;
-	private: System::Windows::Forms::TextBox^ inputLegajo;
-	private: System::Windows::Forms::Button^ buttonVolver;
-	private: System::Windows::Forms::Button^ buttonRegistrarse;
+	public: System::Windows::Forms::TextBox^ inputLegajo;
+	public: System::Windows::Forms::Button^ buttonVolver;
+	public: System::Windows::Forms::Button^ buttonRegistrarse;
 
 
 
@@ -111,12 +111,12 @@ namespace CppCLRWinFormsProject {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->label3->Location = System::Drawing::Point(46, 18);
+			this->label3->Location = System::Drawing::Point(61, 22);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(208, 23);
+			this->label3->Size = System::Drawing::Size(273, 30);
 			this->label3->TabIndex = 9;
 			this->label3->Text = L"Registro de usuario";
-			this->label3->Click += gcnew System::EventHandler(this, &FormRegister::label3_Click);
 			// 
 			// labelNombre
 			// 
@@ -124,9 +124,10 @@ namespace CppCLRWinFormsProject {
 			this->labelNombre->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelNombre->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNombre->Location = System::Drawing::Point(9, 60);
+			this->labelNombre->Location = System::Drawing::Point(12, 74);
+			this->labelNombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelNombre->Name = L"labelNombre";
-			this->labelNombre->Size = System::Drawing::Size(64, 17);
+			this->labelNombre->Size = System::Drawing::Size(79, 22);
 			this->labelNombre->TabIndex = 11;
 			this->labelNombre->Text = L"Nombre";
 			// 
@@ -138,9 +139,10 @@ namespace CppCLRWinFormsProject {
 			this->inputNombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputNombre->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputNombre->Location = System::Drawing::Point(12, 80);
+			this->inputNombre->Location = System::Drawing::Point(16, 98);
+			this->inputNombre->Margin = System::Windows::Forms::Padding(4);
 			this->inputNombre->Name = L"inputNombre";
-			this->inputNombre->Size = System::Drawing::Size(265, 26);
+			this->inputNombre->Size = System::Drawing::Size(353, 30);
 			this->inputNombre->TabIndex = 10;
 			// 
 			// labelApellido
@@ -149,9 +151,10 @@ namespace CppCLRWinFormsProject {
 			this->labelApellido->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelApellido->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelApellido->Location = System::Drawing::Point(8, 116);
+			this->labelApellido->Location = System::Drawing::Point(11, 143);
+			this->labelApellido->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelApellido->Name = L"labelApellido";
-			this->labelApellido->Size = System::Drawing::Size(65, 17);
+			this->labelApellido->Size = System::Drawing::Size(79, 22);
 			this->labelApellido->TabIndex = 13;
 			this->labelApellido->Text = L"Apellido";
 			// 
@@ -163,9 +166,10 @@ namespace CppCLRWinFormsProject {
 			this->inputApellido->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputApellido->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputApellido->Location = System::Drawing::Point(11, 136);
+			this->inputApellido->Location = System::Drawing::Point(15, 167);
+			this->inputApellido->Margin = System::Windows::Forms::Padding(4);
 			this->inputApellido->Name = L"inputApellido";
-			this->inputApellido->Size = System::Drawing::Size(265, 26);
+			this->inputApellido->Size = System::Drawing::Size(353, 30);
 			this->inputApellido->TabIndex = 12;
 			// 
 			// labelSector
@@ -174,9 +178,10 @@ namespace CppCLRWinFormsProject {
 			this->labelSector->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelSector->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelSector->Location = System::Drawing::Point(8, 228);
+			this->labelSector->Location = System::Drawing::Point(11, 281);
+			this->labelSector->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelSector->Name = L"labelSector";
-			this->labelSector->Size = System::Drawing::Size(54, 17);
+			this->labelSector->Size = System::Drawing::Size(68, 22);
 			this->labelSector->TabIndex = 17;
 			this->labelSector->Text = L"Sector";
 			// 
@@ -188,9 +193,10 @@ namespace CppCLRWinFormsProject {
 			this->inputSector->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputSector->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputSector->Location = System::Drawing::Point(11, 248);
+			this->inputSector->Location = System::Drawing::Point(15, 305);
+			this->inputSector->Margin = System::Windows::Forms::Padding(4);
 			this->inputSector->Name = L"inputSector";
-			this->inputSector->Size = System::Drawing::Size(265, 26);
+			this->inputSector->Size = System::Drawing::Size(353, 30);
 			this->inputSector->TabIndex = 16;
 			// 
 			// labelDNI
@@ -199,9 +205,10 @@ namespace CppCLRWinFormsProject {
 			this->labelDNI->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelDNI->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelDNI->Location = System::Drawing::Point(9, 172);
+			this->labelDNI->Location = System::Drawing::Point(12, 212);
+			this->labelDNI->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelDNI->Name = L"labelDNI";
-			this->labelDNI->Size = System::Drawing::Size(34, 17);
+			this->labelDNI->Size = System::Drawing::Size(43, 22);
 			this->labelDNI->TabIndex = 15;
 			this->labelDNI->Text = L"DNI";
 			// 
@@ -213,9 +220,10 @@ namespace CppCLRWinFormsProject {
 			this->inputDNI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputDNI->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputDNI->Location = System::Drawing::Point(12, 192);
+			this->inputDNI->Location = System::Drawing::Point(16, 236);
+			this->inputDNI->Margin = System::Windows::Forms::Padding(4);
 			this->inputDNI->Name = L"inputDNI";
-			this->inputDNI->Size = System::Drawing::Size(265, 26);
+			this->inputDNI->Size = System::Drawing::Size(353, 30);
 			this->inputDNI->TabIndex = 14;
 			// 
 			// labelContraseña
@@ -224,9 +232,10 @@ namespace CppCLRWinFormsProject {
 			this->labelContraseña->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelContraseña->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelContraseña->Location = System::Drawing::Point(8, 396);
+			this->labelContraseña->Location = System::Drawing::Point(11, 487);
+			this->labelContraseña->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelContraseña->Name = L"labelContraseña";
-			this->labelContraseña->Size = System::Drawing::Size(89, 17);
+			this->labelContraseña->Size = System::Drawing::Size(111, 22);
 			this->labelContraseña->TabIndex = 23;
 			this->labelContraseña->Text = L"Contraseña";
 			// 
@@ -238,9 +247,10 @@ namespace CppCLRWinFormsProject {
 			this->inputContraseña->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputContraseña->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputContraseña->Location = System::Drawing::Point(11, 416);
+			this->inputContraseña->Location = System::Drawing::Point(15, 512);
+			this->inputContraseña->Margin = System::Windows::Forms::Padding(4);
 			this->inputContraseña->Name = L"inputContraseña";
-			this->inputContraseña->Size = System::Drawing::Size(265, 26);
+			this->inputContraseña->Size = System::Drawing::Size(353, 30);
 			this->inputContraseña->TabIndex = 22;
 			// 
 			// labelDireccion
@@ -249,9 +259,10 @@ namespace CppCLRWinFormsProject {
 			this->labelDireccion->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelDireccion->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelDireccion->Location = System::Drawing::Point(9, 340);
+			this->labelDireccion->Location = System::Drawing::Point(12, 418);
+			this->labelDireccion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelDireccion->Name = L"labelDireccion";
-			this->labelDireccion->Size = System::Drawing::Size(75, 17);
+			this->labelDireccion->Size = System::Drawing::Size(91, 22);
 			this->labelDireccion->TabIndex = 21;
 			this->labelDireccion->Text = L"Dirección";
 			// 
@@ -263,9 +274,10 @@ namespace CppCLRWinFormsProject {
 			this->inputDireccion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputDireccion->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputDireccion->Location = System::Drawing::Point(12, 360);
+			this->inputDireccion->Location = System::Drawing::Point(16, 443);
+			this->inputDireccion->Margin = System::Windows::Forms::Padding(4);
 			this->inputDireccion->Name = L"inputDireccion";
-			this->inputDireccion->Size = System::Drawing::Size(265, 26);
+			this->inputDireccion->Size = System::Drawing::Size(353, 30);
 			this->inputDireccion->TabIndex = 20;
 			// 
 			// labelLegajo
@@ -274,12 +286,12 @@ namespace CppCLRWinFormsProject {
 			this->labelLegajo->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelLegajo->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelLegajo->Location = System::Drawing::Point(8, 284);
+			this->labelLegajo->Location = System::Drawing::Point(11, 350);
+			this->labelLegajo->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelLegajo->Name = L"labelLegajo";
-			this->labelLegajo->Size = System::Drawing::Size(56, 17);
+			this->labelLegajo->Size = System::Drawing::Size(69, 22);
 			this->labelLegajo->TabIndex = 19;
 			this->labelLegajo->Text = L"Legajo";
-			this->labelLegajo->Click += gcnew System::EventHandler(this, &FormRegister::label8_Click);
 			// 
 			// inputLegajo
 			// 
@@ -289,9 +301,10 @@ namespace CppCLRWinFormsProject {
 			this->inputLegajo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inputLegajo->ForeColor = System::Drawing::SystemColors::Window;
-			this->inputLegajo->Location = System::Drawing::Point(11, 304);
+			this->inputLegajo->Location = System::Drawing::Point(15, 374);
+			this->inputLegajo->Margin = System::Windows::Forms::Padding(4);
 			this->inputLegajo->Name = L"inputLegajo";
-			this->inputLegajo->Size = System::Drawing::Size(265, 26);
+			this->inputLegajo->Size = System::Drawing::Size(353, 30);
 			this->inputLegajo->TabIndex = 18;
 			// 
 			// buttonVolver
@@ -302,13 +315,13 @@ namespace CppCLRWinFormsProject {
 			this->buttonVolver->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->buttonVolver->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->buttonVolver->Location = System::Drawing::Point(11, 460);
+			this->buttonVolver->Location = System::Drawing::Point(15, 566);
+			this->buttonVolver->Margin = System::Windows::Forms::Padding(4);
 			this->buttonVolver->Name = L"buttonVolver";
-			this->buttonVolver->Size = System::Drawing::Size(125, 32);
+			this->buttonVolver->Size = System::Drawing::Size(167, 39);
 			this->buttonVolver->TabIndex = 24;
 			this->buttonVolver->Text = L"Volver";
 			this->buttonVolver->UseVisualStyleBackColor = false;
-			this->buttonVolver->Click += gcnew System::EventHandler(this, &FormRegister::buttonVolver_Click);
 			// 
 			// buttonRegistrarse
 			// 
@@ -318,20 +331,21 @@ namespace CppCLRWinFormsProject {
 			this->buttonRegistrarse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->buttonRegistrarse->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->buttonRegistrarse->Location = System::Drawing::Point(152, 460);
+			this->buttonRegistrarse->Location = System::Drawing::Point(203, 566);
+			this->buttonRegistrarse->Margin = System::Windows::Forms::Padding(4);
 			this->buttonRegistrarse->Name = L"buttonRegistrarse";
-			this->buttonRegistrarse->Size = System::Drawing::Size(125, 32);
+			this->buttonRegistrarse->Size = System::Drawing::Size(167, 39);
 			this->buttonRegistrarse->TabIndex = 25;
 			this->buttonRegistrarse->Text = L"Registrarse";
 			this->buttonRegistrarse->UseVisualStyleBackColor = false;
 			// 
-			// FormRegistro
+			// FormRegister
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
-			this->ClientSize = System::Drawing::Size(284, 504);
+			this->ClientSize = System::Drawing::Size(379, 620);
 			this->Controls->Add(this->buttonRegistrarse);
 			this->Controls->Add(this->buttonVolver);
 			this->Controls->Add(this->labelContraseña);
@@ -349,22 +363,13 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->labelNombre);
 			this->Controls->Add(this->inputNombre);
 			this->Controls->Add(this->label3);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FormRegister";
 			this->Text = L"FormRegister";
-			this->Load += gcnew System::EventHandler(this, &FormRegister::FormRegistro_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void FormRegistro_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void buttonVolver_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	}
-	};
+};
 }

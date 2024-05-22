@@ -12,11 +12,13 @@ public:
 
 	static bool logIn(int dni, String^ contraseña) {
 
+		return false;
 	}
 
-	static bool registrarUsuario(User^ usuario) {
+	/*static bool registrarUsuario(User^ usuario) {
 		
-	}
+		return false;
+	}*/
 
 
 

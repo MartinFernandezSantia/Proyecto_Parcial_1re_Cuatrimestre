@@ -1,3 +1,11 @@
 ﻿  CppCLR_WinFormsProject.cpp
+C:\Users\Martin\Desktop\Programming\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\CppCLR_WinFormsProject.cpp(1,1): warning C4005: '__CLR_VER': redefinición de macro
+  (compilando archivo de origen "/CppCLR_WinFormsProject.cpp")
+  C:\Users\Martin\Desktop\Programming\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\CppCLR_WinFormsProject.cpp(1,1):
+  '__CLR_VER' declarado previamente en la línea de comandos
+  
+C:\Users\Martin\Desktop\Programming\C++\Proyecto_Parcial_1re_Cuatrimestre\Proyecto_Parcial_1re_Cuatrimestre\CppCLR_WinFormsProject.cpp(1,1): warning C4651: Se especificó '/D__CLR_VER=40809232' para el encabezado precompilado pero no para la compilación actual
+  (compilando archivo de origen "/CppCLR_WinFormsProject.cpp")
+  
   AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Proyecto_Parcial_1re_Cuatrimestre.vcxproj -> C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.exe
+  Proyecto_Parcial_1re_Cuatrimestre.vcxproj -> C:\Users\Martin\Desktop\Programming\C++\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.exe

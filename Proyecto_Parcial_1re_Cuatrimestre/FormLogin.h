@@ -14,10 +14,10 @@ namespace CppCLRWinFormsProject {
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+	public ref class FormLogin : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+		FormLogin(void)
 		{
 			InitializeComponent();
 			//
@@ -29,7 +29,7 @@ namespace CppCLRWinFormsProject {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Form1()
+		~FormLogin()
 		{
 			if (components)
 			{
@@ -39,14 +39,14 @@ namespace CppCLRWinFormsProject {
 	public: System::Windows::Forms::Button^ registerButton;
 	protected:
 
-	private: System::Windows::Forms::Button^ loginButton;
-	private: System::Windows::Forms::TextBox^ dniInput;
+	public: System::Windows::Forms::Button^ loginButton;
+	public: System::Windows::Forms::TextBox^ dniInput;
 
 	private: System::Windows::Forms::Label^ dniLabel;
 
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ passwordInput;
+	public: System::Windows::Forms::TextBox^ passwordInput;
 
 
 	private: System::Windows::Forms::LinkLabel^ forgotPassword;
@@ -61,7 +61,7 @@ namespace CppCLRWinFormsProject {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -90,13 +90,13 @@ namespace CppCLRWinFormsProject {
 			this->registerButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->registerButton->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->registerButton->Location = System::Drawing::Point(12, 215);
+			this->registerButton->Location = System::Drawing::Point(16, 265);
+			this->registerButton->Margin = System::Windows::Forms::Padding(4);
 			this->registerButton->Name = L"registerButton";
-			this->registerButton->Size = System::Drawing::Size(125, 32);
+			this->registerButton->Size = System::Drawing::Size(167, 39);
 			this->registerButton->TabIndex = 0;
 			this->registerButton->Text = L"Registrarse";
 			this->registerButton->UseVisualStyleBackColor = false;
-			//this->registerButton->Click += gcnew System::EventHandler(this, &Form1::registerButton_Click);
 			// 
 			// loginButton
 			// 
@@ -106,13 +106,13 @@ namespace CppCLRWinFormsProject {
 			this->loginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->loginButton->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->loginButton->Location = System::Drawing::Point(152, 215);
+			this->loginButton->Location = System::Drawing::Point(203, 265);
+			this->loginButton->Margin = System::Windows::Forms::Padding(4);
 			this->loginButton->Name = L"loginButton";
-			this->loginButton->Size = System::Drawing::Size(125, 32);
+			this->loginButton->Size = System::Drawing::Size(167, 39);
 			this->loginButton->TabIndex = 1;
 			this->loginButton->Text = L"Iniciar sesión";
 			this->loginButton->UseVisualStyleBackColor = false;
-			this->loginButton->Click += gcnew System::EventHandler(this, &Form1::loginButton_Click_1);
 			// 
 			// dniInput
 			// 
@@ -122,9 +122,10 @@ namespace CppCLRWinFormsProject {
 			this->dniInput->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dniInput->ForeColor = System::Drawing::SystemColors::Window;
-			this->dniInput->Location = System::Drawing::Point(12, 77);
+			this->dniInput->Location = System::Drawing::Point(15, 93);
+			this->dniInput->Margin = System::Windows::Forms::Padding(4);
 			this->dniInput->Name = L"dniInput";
-			this->dniInput->Size = System::Drawing::Size(265, 26);
+			this->dniInput->Size = System::Drawing::Size(353, 30);
 			this->dniInput->TabIndex = 2;
 			// 
 			// dniLabel
@@ -133,9 +134,10 @@ namespace CppCLRWinFormsProject {
 			this->dniLabel->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dniLabel->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->dniLabel->Location = System::Drawing::Point(8, 54);
+			this->dniLabel->Location = System::Drawing::Point(11, 66);
+			this->dniLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->dniLabel->Name = L"dniLabel";
-			this->dniLabel->Size = System::Drawing::Size(34, 17);
+			this->dniLabel->Size = System::Drawing::Size(43, 22);
 			this->dniLabel->TabIndex = 3;
 			this->dniLabel->Text = L"DNI";
 			// 
@@ -145,9 +147,10 @@ namespace CppCLRWinFormsProject {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->label2->Location = System::Drawing::Point(8, 113);
+			this->label2->Location = System::Drawing::Point(11, 139);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(89, 17);
+			this->label2->Size = System::Drawing::Size(111, 22);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Contraseña";
 			// 
@@ -160,10 +163,11 @@ namespace CppCLRWinFormsProject {
 			this->passwordInput->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->passwordInput->ForeColor = System::Drawing::SystemColors::Window;
-			this->passwordInput->Location = System::Drawing::Point(12, 136);
+			this->passwordInput->Location = System::Drawing::Point(16, 167);
+			this->passwordInput->Margin = System::Windows::Forms::Padding(4);
 			this->passwordInput->Name = L"passwordInput";
 			this->passwordInput->PasswordChar = '*';
-			this->passwordInput->Size = System::Drawing::Size(265, 26);
+			this->passwordInput->Size = System::Drawing::Size(353, 30);
 			this->passwordInput->TabIndex = 4;
 			// 
 			// forgotPassword
@@ -171,9 +175,10 @@ namespace CppCLRWinFormsProject {
 			this->forgotPassword->ActiveLinkColor = System::Drawing::Color::MidnightBlue;
 			this->forgotPassword->AutoSize = true;
 			this->forgotPassword->LinkColor = System::Drawing::Color::RoyalBlue;
-			this->forgotPassword->Location = System::Drawing::Point(128, 177);
+			this->forgotPassword->Location = System::Drawing::Point(171, 218);
+			this->forgotPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->forgotPassword->Name = L"forgotPassword";
-			this->forgotPassword->Size = System::Drawing::Size(149, 13);
+			this->forgotPassword->Size = System::Drawing::Size(185, 16);
 			this->forgotPassword->TabIndex = 7;
 			this->forgotPassword->TabStop = true;
 			this->forgotPassword->Text = L"¿Has olvidado tu contraseña\?";
@@ -184,9 +189,10 @@ namespace CppCLRWinFormsProject {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->label3->Location = System::Drawing::Point(67, 18);
+			this->label3->Location = System::Drawing::Point(89, 22);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(167, 23);
+			this->label3->Size = System::Drawing::Size(221, 30);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Inicio de sesión";
 			// 
@@ -194,9 +200,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->ForeColor = System::Drawing::Color::Firebrick;
-			this->label4->Location = System::Drawing::Point(184, 59);
+			this->label4->Location = System::Drawing::Point(245, 73);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(93, 13);
+			this->label4->Size = System::Drawing::Size(116, 16);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Usuario incorrecto";
 			this->label4->Visible = false;
@@ -205,20 +212,21 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->ForeColor = System::Drawing::Color::Firebrick;
-			this->label5->Location = System::Drawing::Point(166, 120);
+			this->label5->Location = System::Drawing::Point(221, 148);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(111, 13);
+			this->label5->Size = System::Drawing::Size(138, 16);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"Contraseña incorrecta";
 			this->label5->Visible = false;
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->ClientSize = System::Drawing::Size(379, 321);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -229,6 +237,7 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->dniInput);
 			this->Controls->Add(this->loginButton);
 			this->Controls->Add(this->registerButton);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
@@ -236,17 +245,6 @@ namespace CppCLRWinFormsProject {
 
 		}
 #pragma endregion
+	};
 
-//private: System::Void registerButton_Click(System::Object^ sender, System::EventArgs^ e) {
-//	CppCLRWinFormsProject::FormRegister^ formRegistro = gcnew CppCLRWinFormsProject::FormRegister();
-//	formRegistro->Show();
-//	this->Hide();
-//}
-private: System::Void loginButton_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	String^ username = this->dniInput->Text;
-	String^ password = this->passwordInput->Text;
-
-	MessageBox::Show(username, "Usuario");
-}
-};
 }

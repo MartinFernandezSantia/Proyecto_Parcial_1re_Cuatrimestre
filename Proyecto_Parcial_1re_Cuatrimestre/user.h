@@ -14,7 +14,7 @@ private:
 	String^ contraseña;
 
 public:
-	User(String^ nombre, String^ apellido, int dni, String^ sector, int legajo, String^ direccion) {
+	User(String^ nombre, String^ apellido, int dni, String^ sector, int legajo, String^ direccion, String^ contraseña) {
 		this->nombre = nombre;
 		this->apellido = apellido;
 		this->dni = dni;
@@ -22,5 +22,13 @@ public:
 		this->legajo = legajo;
 		this->direccion = direccion;
 		this->contraseña = Auth::hashContraseña(contraseña);
+	}
+
+	String^ getContraseña() {
+		return this->contraseña;
+	}
+
+	int getDNI() {
+		return this->dni;
 	}
 };
