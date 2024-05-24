@@ -82,10 +82,10 @@ public:
 
 	Void addRowDatagridStock(System::Object^ sender, System::EventArgs^ e) {
 		this->formMain->dataGridStock->Rows->Add(
-			Convert::ToInt32(this->formMain->inputIdProducto->Text),
+			this->formMain->inputIdProducto->Text,
 			this->formMain->inputNombre->Text,
-			Convert::ToDouble(this->formMain->inputPrecio->Text),
-			Convert::ToInt32(this->formMain->inputCantidad->Text)
+			this->formMain->inputPrecio->Text,
+			this->formMain->inputCantidad->Text
 		);
 	}
 
