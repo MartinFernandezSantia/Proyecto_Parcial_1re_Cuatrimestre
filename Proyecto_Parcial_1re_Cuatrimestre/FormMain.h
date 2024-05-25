@@ -130,8 +130,9 @@ private:
 private: System::Windows::Forms::Label^ label2;
 public:
 public: System::Windows::Forms::TextBox^ inputSubtotal;
+public: System::Windows::Forms::Button^ buttonAplicarDescuento;
 private:
-public: System::Windows::Forms::Button^ buttonRegistrarse;
+
 private:
 
 private:
@@ -174,10 +175,10 @@ public:
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabStock = (gcnew System::Windows::Forms::TabPage());
 			this->dataGridStock = (gcnew System::Windows::Forms::DataGridView());
@@ -214,7 +215,7 @@ public:
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->inputDescuento = (gcnew System::Windows::Forms::TextBox());
-			this->buttonRegistrarse = (gcnew System::Windows::Forms::Button());
+			this->buttonAplicarDescuento = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->inputSubtotal = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -266,21 +267,23 @@ public:
 			// dataGridStock
 			// 
 			this->dataGridStock->AllowUserToAddRows = false;
+			this->dataGridStock->AllowUserToDeleteRows = false;
+			this->dataGridStock->AllowUserToResizeRows = false;
 			this->dataGridStock->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridStock->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->dataGridStock->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->dataGridStock->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridStock->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridStock->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
 			this->dataGridStock->ColumnHeadersHeight = 30;
 			this->dataGridStock->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->Column1,
@@ -294,15 +297,15 @@ public:
 			this->dataGridStock->Name = L"dataGridStock";
 			this->dataGridStock->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->dataGridStock->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridStock->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle10->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridStock->RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this->dataGridStock->RowHeadersWidth = 51;
 			this->dataGridStock->RowTemplate->Height = 24;
 			this->dataGridStock->Size = System::Drawing::Size(594, 198);
@@ -399,7 +402,7 @@ public:
 			this->inputNombre->Location = System::Drawing::Point(10, 96);
 			this->inputNombre->Name = L"inputNombre";
 			this->inputNombre->Size = System::Drawing::Size(265, 26);
-			this->inputNombre->TabIndex = 18;
+			this->inputNombre->TabIndex = 13;
 			// 
 			// labelNombre
 			// 
@@ -424,7 +427,7 @@ public:
 			this->inputPrecio->Location = System::Drawing::Point(325, 39);
 			this->inputPrecio->Name = L"inputPrecio";
 			this->inputPrecio->Size = System::Drawing::Size(265, 26);
-			this->inputPrecio->TabIndex = 16;
+			this->inputPrecio->TabIndex = 14;
 			// 
 			// labelPrecio
 			// 
@@ -449,7 +452,7 @@ public:
 			this->inputCantidad->Location = System::Drawing::Point(325, 96);
 			this->inputCantidad->Name = L"inputCantidad";
 			this->inputCantidad->Size = System::Drawing::Size(265, 26);
-			this->inputCantidad->TabIndex = 14;
+			this->inputCantidad->TabIndex = 15;
 			// 
 			// labelIdProducto
 			// 
@@ -484,7 +487,7 @@ public:
 			this->tabFacturacion->Controls->Add(this->inputTotal);
 			this->tabFacturacion->Controls->Add(this->label2);
 			this->tabFacturacion->Controls->Add(this->inputSubtotal);
-			this->tabFacturacion->Controls->Add(this->buttonRegistrarse);
+			this->tabFacturacion->Controls->Add(this->buttonAplicarDescuento);
 			this->tabFacturacion->Controls->Add(this->label1);
 			this->tabFacturacion->Controls->Add(this->inputDescuento);
 			this->tabFacturacion->Controls->Add(this->dataGridFacturacion);
@@ -572,7 +575,7 @@ public:
 			this->inputCantidadFacturacion->Location = System::Drawing::Point(325, 85);
 			this->inputCantidadFacturacion->Name = L"inputCantidadFacturacion";
 			this->inputCantidadFacturacion->Size = System::Drawing::Size(265, 26);
-			this->inputCantidadFacturacion->TabIndex = 22;
+			this->inputCantidadFacturacion->TabIndex = 18;
 			// 
 			// labelProducto
 			// 
@@ -597,7 +600,7 @@ public:
 			this->inputProducto->Location = System::Drawing::Point(11, 135);
 			this->inputProducto->Name = L"inputProducto";
 			this->inputProducto->Size = System::Drawing::Size(265, 26);
-			this->inputProducto->TabIndex = 20;
+			this->inputProducto->TabIndex = 16;
 			// 
 			// labelPrecioFacturacion
 			// 
@@ -622,7 +625,7 @@ public:
 			this->inputPrecioFacturacion->Location = System::Drawing::Point(325, 35);
 			this->inputPrecioFacturacion->Name = L"inputPrecioFacturacion";
 			this->inputPrecioFacturacion->Size = System::Drawing::Size(265, 26);
-			this->inputPrecioFacturacion->TabIndex = 18;
+			this->inputPrecioFacturacion->TabIndex = 17;
 			// 
 			// labelIdEmpleado
 			// 
@@ -647,7 +650,7 @@ public:
 			this->inputIdEmpleado->Location = System::Drawing::Point(11, 85);
 			this->inputIdEmpleado->Name = L"inputIdEmpleado";
 			this->inputIdEmpleado->Size = System::Drawing::Size(265, 26);
-			this->inputIdEmpleado->TabIndex = 16;
+			this->inputIdEmpleado->TabIndex = 15;
 			// 
 			// labelIdCliente
 			// 
@@ -678,22 +681,23 @@ public:
 			// 
 			this->dataGridFacturacion->AllowUserToAddRows = false;
 			this->dataGridFacturacion->AllowUserToDeleteRows = false;
+			this->dataGridFacturacion->AllowUserToResizeRows = false;
 			this->dataGridFacturacion->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridFacturacion->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->dataGridFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dataGridFacturacion->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->dataGridFacturacion->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle11->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)));
+			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridFacturacion->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle11->ForeColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle11->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle11->SelectionForeColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle11->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridFacturacion->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
 			this->dataGridFacturacion->ColumnHeadersHeight = 30;
 			this->dataGridFacturacion->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->Column5,
@@ -703,19 +707,18 @@ public:
 			this->dataGridFacturacion->GridColor = System::Drawing::SystemColors::Control;
 			this->dataGridFacturacion->Location = System::Drawing::Point(11, 200);
 			this->dataGridFacturacion->Margin = System::Windows::Forms::Padding(2);
-			this->dataGridFacturacion->MultiSelect = false;
 			this->dataGridFacturacion->Name = L"dataGridFacturacion";
 			this->dataGridFacturacion->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->dataGridFacturacion->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridFacturacion->RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle12->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle12->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle12->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle12->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle12->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle12->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridFacturacion->RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
 			this->dataGridFacturacion->RowHeadersWidth = 51;
 			this->dataGridFacturacion->RowTemplate->Height = 24;
 			this->dataGridFacturacion->Size = System::Drawing::Size(283, 213);
@@ -759,22 +762,22 @@ public:
 			this->inputDescuento->Location = System::Drawing::Point(325, 220);
 			this->inputDescuento->Name = L"inputDescuento";
 			this->inputDescuento->Size = System::Drawing::Size(149, 26);
-			this->inputDescuento->TabIndex = 27;
+			this->inputDescuento->TabIndex = 19;
 			// 
-			// buttonRegistrarse
+			// buttonAplicarDescuento
 			// 
-			this->buttonRegistrarse->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(82)),
+			this->buttonAplicarDescuento->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(82)),
 				static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(82)));
-			this->buttonRegistrarse->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->buttonRegistrarse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			this->buttonAplicarDescuento->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->buttonAplicarDescuento->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->buttonRegistrarse->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->buttonRegistrarse->Location = System::Drawing::Point(497, 220);
-			this->buttonRegistrarse->Name = L"buttonRegistrarse";
-			this->buttonRegistrarse->Size = System::Drawing::Size(93, 26);
-			this->buttonRegistrarse->TabIndex = 29;
-			this->buttonRegistrarse->Text = L"Aplicar";
-			this->buttonRegistrarse->UseVisualStyleBackColor = false;
+			this->buttonAplicarDescuento->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->buttonAplicarDescuento->Location = System::Drawing::Point(497, 220);
+			this->buttonAplicarDescuento->Name = L"buttonAplicarDescuento";
+			this->buttonAplicarDescuento->Size = System::Drawing::Size(93, 26);
+			this->buttonAplicarDescuento->TabIndex = 29;
+			this->buttonAplicarDescuento->Text = L"Aplicar";
+			this->buttonAplicarDescuento->UseVisualStyleBackColor = false;
 			// 
 			// label2
 			// 
@@ -801,6 +804,7 @@ public:
 			this->inputSubtotal->Name = L"inputSubtotal";
 			this->inputSubtotal->Size = System::Drawing::Size(197, 26);
 			this->inputSubtotal->TabIndex = 30;
+			this->inputSubtotal->Text = L"$0";
 			// 
 			// label3
 			// 
@@ -827,6 +831,7 @@ public:
 			this->inputTotal->Name = L"inputTotal";
 			this->inputTotal->Size = System::Drawing::Size(197, 26);
 			this->inputTotal->TabIndex = 32;
+			this->inputTotal->Text = L"$0";
 			// 
 			// FormMain
 			// 

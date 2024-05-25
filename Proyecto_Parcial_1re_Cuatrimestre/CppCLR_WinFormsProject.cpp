@@ -13,31 +13,42 @@ private:
 	CppCLRWinFormsProject::FormRegister^ formRegister;
 	CppCLRWinFormsProject::FormMain^ formMain;
 	User^ usuario;
+
+	//Atributos para formMain
+	double subtotal = 0;
+	double descuento;
+	double total = 0;
+
 public:
 	Controller() {
 		Application::EnableVisualStyles();
 		Application::SetCompatibleTextRenderingDefault(false);
 
+		// Instancias
 		this->formLogin = gcnew CppCLRWinFormsProject::FormLogin();
 		this->formRegister = gcnew CppCLRWinFormsProject::FormRegister();
 		this->formMain = gcnew CppCLRWinFormsProject::FormMain();
 
-		// Login Buttons
+		// Login
 		this->formLogin->registerButton->Click += gcnew System::EventHandler(this, &Controller::openFormRegister_Form1);
-		this->formLogin->loginButton->Click += gcnew System::EventHandler(this, &Controller::loginUsuario_Form1);
+		this->formLogin->loginButton->Click += gcnew System::EventHandler(this, &Controller::loginUsuario);
 
-		// Register Buttons
+		// Register
 		this->formRegister->buttonVolver->Click += gcnew System::EventHandler(this, &Controller::volver_FormRegister);
 		this->formRegister->buttonRegistrarse->Click += gcnew System::EventHandler(this, &Controller::registrarUsuario_FormRegister);
 
-		// MainForm Butttons
-		this->formMain->buttonAgregar->Click += gcnew System::EventHandler(this, &Controller::addRowDatagridStock);
-		this->formMain->buttonEliminar->Click += gcnew System::EventHandler(this, &Controller::deleteRowDatagridStock);
-
+		// MainForm
+		// - Stock
+		this->formMain->buttonAgregar->Click += gcnew System::EventHandler(this, &Controller::agregarStock);
+		this->formMain->buttonEliminar->Click += gcnew System::EventHandler(this, &Controller::eliminarStock);
+		// - Facturacion
+		this->formMain->buttonAgregarFacturacion->Click += gcnew System::EventHandler(this, &Controller::agregarFacturacion);
+		this->formMain->buttonEliminarFacturacion->Click += gcnew System::EventHandler(this, &Controller::eliminarFacturacion);
+		this->formMain->buttonAplicarDescuento->Click += gcnew System::EventHandler(this, &Controller::aplicarDescuento);
 
 
 		//Usuario hardcodeado
-		usuario = gcnew User("Martin", "apellido", 1234, "sector", 123, "direccion", "hola");
+		usuario = gcnew User("Martin", "apellido", 1234, "sector", 123, "direccion", "asd");
 
 		Application::Run(formLogin);
 	}
@@ -69,18 +80,27 @@ public:
 		this->volver_FormRegister(nullptr, nullptr);
 	}
 
-	Void loginUsuario_Form1(System::Object^ sender, System::EventArgs^ e) {
-		if (Convert::ToInt32(this->formLogin->dniInput->Text) == this->usuario->getDNI() && this->formLogin->passwordInput->Text == this->usuario->getContraseña()) {
-			this->formMain->Show();
-			this->formLogin->Hide();
+	Void loginUsuario(System::Object^ sender, System::EventArgs^ e) {
+		this->formLogin->labelDniIncorrecto->Hide();
+		this->formLogin->labelContraseñaIncorrecta->Hide();
+
+		try {
+			int dni = Convert::ToInt32(this->formLogin->dniInput->Text);
+			String^ contraseña = this->formLogin->passwordInput->Text;
+
+			if (dni == this->usuario->getDNI()) {
+				if (contraseña == this->usuario->getContraseña()) {
+					this->formMain->Show();
+					this->formLogin->Hide();
+				}
+				else this->formLogin->labelContraseñaIncorrecta->Show();
+			}
+			else this->formLogin->labelDniIncorrecto->Show();
 		}
-		else
-		{
-			MessageBox::Show("Wa wa waaa");
-		}
+		catch(System::FormatException^) {}
 	}
 
-	Void addRowDatagridStock(System::Object^ sender, System::EventArgs^ e) {
+	Void agregarStock(System::Object^ sender, System::EventArgs^ e) {
 		this->formMain->dataGridStock->Rows->Add(
 			this->formMain->inputIdProducto->Text,
 			this->formMain->inputNombre->Text,
@@ -89,12 +109,80 @@ public:
 		);
 	}
 
-	Void deleteRowDatagridStock(System::Object^ sender, System::EventArgs^ e) {
+	Void eliminarStock(System::Object^ sender, System::EventArgs^ e) {
 		if (this->formMain->dataGridStock->SelectedRows->Count > 0)
 		{
 			int indiceSeleccionado = this->formMain->dataGridStock->SelectedRows[0]->Index;
 			this->formMain->dataGridStock->Rows->RemoveAt(indiceSeleccionado);
 		}
+	}
+
+	Void agregarFacturacion(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			double precio = Convert::ToDouble(this->formMain->inputPrecioFacturacion->Text);
+			int cantidad = Convert::ToInt32(this->formMain->inputCantidadFacturacion->Text);
+
+			if (precio >= 0 && cantidad >= 0) {
+				this->subtotal += (precio * cantidad);
+				this->total += (precio * cantidad);
+				this->actualizarTotalySubtotal();
+			}
+			else MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+		}
+		catch (System::FormatException^) {
+			MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+			return;
+		}
+
+		this->formMain->dataGridFacturacion->Rows->Add(
+			this->formMain->inputProducto->Text,
+			this->formMain->inputPrecioFacturacion->Text,
+			this->formMain->inputCantidadFacturacion->Text
+		);
+	}
+
+	Void eliminarFacturacion(System::Object^ sender, System::EventArgs^ e) {
+		DataGridViewSelectedRowCollection^ filas_seleccionadas = this->formMain->dataGridFacturacion->SelectedRows;
+		if (filas_seleccionadas->Count > 0)
+		{
+			int indiceSeleccionado = filas_seleccionadas[0]->Index;
+			
+			int cantidad = Convert::ToInt32(filas_seleccionadas[0]->Cells[2]->Value);
+			double precio = Convert::ToInt32(filas_seleccionadas[0]->Cells[1]->Value);
+
+			this->subtotal -= cantidad * precio;
+			this->total -= cantidad * precio;
+
+			if (this->total < 0) {
+				this->total = 0;
+			}
+
+			this->actualizarTotalySubtotal();
+
+			this->formMain->dataGridFacturacion->Rows->RemoveAt(indiceSeleccionado);
+		}
+	}
+
+	Void aplicarDescuento(System::Object^ sender, System::EventArgs^ e) {
+		try
+		{
+			this->descuento = Convert::ToDouble(this->formMain->inputDescuento->Text);
+
+			if (this->descuento >= 0) {
+				this->total = this->subtotal / 100 * (100 - descuento);
+				this->actualizarTotalySubtotal();
+			}
+			return;
+
+		}
+		catch (System::FormatException^){}
+
+		MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+	}
+
+	Void actualizarTotalySubtotal() {
+		this->formMain->inputSubtotal->Text = "$ " + Convert::ToString(this->subtotal);
+		this->formMain->inputTotal->Text = "$ " + Convert::ToString(this->total);
 	}
 };
 
