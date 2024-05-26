@@ -36,8 +36,10 @@ public:
 		// Register
 		this->formRegister->buttonVolver->Click += gcnew System::EventHandler(this, &Controller::volver_FormRegister);
 		this->formRegister->buttonRegistrarse->Click += gcnew System::EventHandler(this, &Controller::registrarUsuario_FormRegister);
+		this->formRegister->FormClosing += gcnew FormClosingEventHandler(this, &Controller::terminarAplicacion);
 
 		// MainForm
+		this->formMain->FormClosing += gcnew FormClosingEventHandler(this, &Controller::terminarAplicacion);
 		// - Stock
 		this->formMain->buttonAgregar->Click += gcnew System::EventHandler(this, &Controller::agregarStock);
 		this->formMain->buttonEliminar->Click += gcnew System::EventHandler(this, &Controller::eliminarStock);
@@ -65,48 +67,66 @@ public:
 
 	Void registrarUsuario_FormRegister(System::Object^ sender, System::EventArgs^ e) {
 		// Valores de las TextBoxes del FormRegister
-		String^ nombre = this->formRegister->inputNombre->Text;
-		String^ apellido = this->formRegister->inputApellido->Text;
-		int dni = Convert::ToInt32(this->formRegister->inputDNI->Text);
-		String^ sector = this->formRegister->inputSector->Text;
-		int legajo = Convert::ToInt32(this->formRegister->inputLegajo->Text);
-		String^ direccion = this->formRegister->inputDireccion->Text;
-		String^ contraseña = this->formRegister->inputContraseña->Text;
+		try {
+			String^ nombre = this->formRegister->inputNombre->Text;
+			String^ apellido = this->formRegister->inputApellido->Text;
+			int dni = Convert::ToInt32(this->formRegister->inputDNI->Text);
+			String^ sector = this->formRegister->inputSector->Text;
+			int legajo = Convert::ToInt32(this->formRegister->inputLegajo->Text);
+			String^ direccion = this->formRegister->inputDireccion->Text;
+			String^ contraseña = this->formRegister->inputContraseña->Text;
 
-		// Creo el usuario
-		usuario = gcnew User(nombre, apellido, dni, sector, legajo, direccion, contraseña);
-		
-		// Vuelvo a la pestaña de login
-		this->volver_FormRegister(nullptr, nullptr);
+			// Creo el usuario
+			usuario = gcnew User(nombre, apellido, dni, sector, legajo, direccion, contraseña);
+
+			// Vuelvo a la pestaña de login
+			this->volver_FormRegister(nullptr, nullptr);
+
+		}
+		catch (System::FormatException^) {
+			this->mensajeFormatoIncorrecto("Registro");
+		}
 	}
 
 	Void loginUsuario(System::Object^ sender, System::EventArgs^ e) {
 		this->formLogin->labelDniIncorrecto->Hide();
 		this->formLogin->labelContraseñaIncorrecta->Hide();
 
-		try {
-			int dni = Convert::ToInt32(this->formLogin->dniInput->Text);
-			String^ contraseña = this->formLogin->passwordInput->Text;
+		if (this->usuario) {
+			try {
+				int dni = Convert::ToInt32(this->formLogin->dniInput->Text);
+				String^ contraseña = this->formLogin->passwordInput->Text;
 
-			if (dni == this->usuario->getDNI()) {
-				if (contraseña == this->usuario->getContraseña()) {
-					this->formMain->Show();
-					this->formLogin->Hide();
+				if (dni == this->usuario->getDNI()) {
+					if (contraseña == this->usuario->getContraseña()) {
+						this->formMain->Show();
+						this->formLogin->Hide();
+					}
+					else this->formLogin->labelContraseñaIncorrecta->Show();
 				}
-				else this->formLogin->labelContraseñaIncorrecta->Show();
+				else this->formLogin->labelDniIncorrecto->Show();
 			}
-			else this->formLogin->labelDniIncorrecto->Show();
+			catch (System::FormatException^) {}
 		}
-		catch(System::FormatException^) {}
+		else
+		{
+			MessageBox::Show("Debe crear un usuario primero", "Login");
+		}
 	}
 
 	Void agregarStock(System::Object^ sender, System::EventArgs^ e) {
-		this->formMain->dataGridStock->Rows->Add(
-			this->formMain->inputIdProducto->Text,
-			this->formMain->inputNombre->Text,
-			this->formMain->inputPrecio->Text,
-			this->formMain->inputCantidad->Text
-		);
+		try {
+			this->formMain->dataGridStock->Rows->Add(
+				Convert::ToInt32(this->formMain->inputIdProducto->Text),
+				this->formMain->inputNombre->Text,
+				Convert::ToDouble(this->formMain->inputPrecio->Text),
+				Convert::ToInt32(this->formMain->inputCantidad->Text)
+			);
+		}
+		catch (System::FormatException^) {
+			this->mensajeFormatoIncorrecto("Stock");
+		}
+		
 	}
 
 	Void eliminarStock(System::Object^ sender, System::EventArgs^ e) {
@@ -127,10 +147,10 @@ public:
 				this->total += (precio * cantidad);
 				this->actualizarTotalySubtotal();
 			}
-			else MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+			else this->mensajeFormatoIncorrecto("Facturacion");
 		}
 		catch (System::FormatException^) {
-			MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+			this->mensajeFormatoIncorrecto("Facturacion");
 			return;
 		}
 
@@ -177,13 +197,22 @@ public:
 		}
 		catch (System::FormatException^){}
 
-		MessageBox::Show("Los datos ingresados son incorrectos", "Facturacion");
+		this->mensajeFormatoIncorrecto("Facturacion");
 	}
 
 	Void actualizarTotalySubtotal() {
 		this->formMain->inputSubtotal->Text = "$ " + Convert::ToString(this->subtotal);
 		this->formMain->inputTotal->Text = "$ " + Convert::ToString(this->total);
 	}
+
+	Void terminarAplicacion(Object^ sender, FormClosingEventArgs^ e) {
+		Application::Exit();
+	}
+
+	Void mensajeFormatoIncorrecto(String^ ventana) {
+		MessageBox::Show("Los datos ingresados no son del tipo correcto", ventana);
+	}
+
 };
 
 
