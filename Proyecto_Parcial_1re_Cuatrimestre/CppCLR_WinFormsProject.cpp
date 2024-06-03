@@ -47,6 +47,15 @@ public:
 		this->formMain->buttonAgregarFacturacion->Click += gcnew System::EventHandler(this, &Controller::agregarFacturacion);
 		this->formMain->buttonEliminarFacturacion->Click += gcnew System::EventHandler(this, &Controller::eliminarFacturacion);
 		this->formMain->buttonAplicarDescuento->Click += gcnew System::EventHandler(this, &Controller::aplicarDescuento);
+		// - Clientes
+		this->formMain->buttonAgregarCliente->Click += gcnew System::EventHandler(this, &Controller::agregarClientes);
+		this->formMain->buttonEliminarCliente->Click += gcnew System::EventHandler(this, &Controller::eliminarClientes);
+		// - Empleado
+		this->formMain->buttonAgregarEmpleado->Click += gcnew System::EventHandler(this, &Controller::agregarEmpleado);
+		this->formMain->buttonEliminarEmpleado->Click += gcnew System::EventHandler(this, &Controller::eliminarEmpleado);
+		// - Proveedores
+		this->formMain->buttonAgregarProveedores->Click += gcnew System::EventHandler(this, &Controller::agregarProveedores);
+		this->formMain->buttonEliminarProveedores->Click += gcnew System::EventHandler(this, &Controller::eliminarProveedores);
 
 
 		//Usuario hardcodeado
@@ -129,11 +138,79 @@ public:
 		
 	}
 
+	Void agregarClientes(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			this->formMain->dataGridClientes->Rows->Add(
+				Convert::ToInt32(this->formMain->textBox4->Text),
+				(this->formMain->textBox2->Text + " " + this->formMain->textBox3->Text),
+				Convert::ToInt32(this->formMain->textBox1->Text)
+			);
+		}
+		catch (System::FormatException^) {
+			this->mensajeFormatoIncorrecto("Clientes");
+		}
+
+	}
+
+	Void agregarEmpleado(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			this->formMain->dataGridEmpleado->Rows->Add(
+				Convert::ToInt32(this->formMain->textBox8->Text),
+				this->formMain->textBox6->Text, 
+				this->formMain->textBox7->Text,
+				Convert::ToInt32(this->formMain->textBox5->Text)
+			);
+		}
+		catch (System::FormatException^) {
+			this->mensajeFormatoIncorrecto("Empleado");
+		}
+
+	}
+
+	Void agregarProveedores(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			this->formMain->dataGridProveedores->Rows->Add(
+				Convert::ToInt32(this->formMain->textBox12->Text),
+				this->formMain->textBox9->Text,
+				this->formMain->textBox10->Text,
+				this->formMain->textBox11->Text
+			);
+		}
+		catch (System::FormatException^) {
+			this->mensajeFormatoIncorrecto("Stock");
+		}
+
+	}
+
 	Void eliminarStock(System::Object^ sender, System::EventArgs^ e) {
 		if (this->formMain->dataGridStock->SelectedRows->Count > 0)
 		{
 			int indiceSeleccionado = this->formMain->dataGridStock->SelectedRows[0]->Index;
 			this->formMain->dataGridStock->Rows->RemoveAt(indiceSeleccionado);
+		}
+	}
+
+	Void eliminarClientes(System::Object^ sender, System::EventArgs^ e) {
+		if (this->formMain->dataGridClientes->SelectedRows->Count > 0)
+		{
+			int indiceSeleccionado = this->formMain->dataGridClientes->SelectedRows[0]->Index;
+			this->formMain->dataGridClientes->Rows->RemoveAt(indiceSeleccionado);
+		}
+	}
+
+	Void eliminarEmpleado(System::Object^ sender, System::EventArgs^ e) {
+		if (this->formMain->dataGridEmpleado->SelectedRows->Count > 0)
+		{
+			int indiceSeleccionado = this->formMain->dataGridEmpleado->SelectedRows[0]->Index;
+			this->formMain->dataGridEmpleado->Rows->RemoveAt(indiceSeleccionado);
+		}
+	}
+
+	Void eliminarProveedores(System::Object^ sender, System::EventArgs^ e) {
+		if (this->formMain->dataGridProveedores->SelectedRows->Count > 0)
+		{
+			int indiceSeleccionado = this->formMain->dataGridProveedores->SelectedRows[0]->Index;
+			this->formMain->dataGridProveedores->Rows->RemoveAt(indiceSeleccionado);
 		}
 	}
 
@@ -168,7 +245,7 @@ public:
 			int indiceSeleccionado = filas_seleccionadas[0]->Index;
 			
 			int cantidad = Convert::ToInt32(filas_seleccionadas[0]->Cells[2]->Value);
-			double precio = Convert::ToInt32(filas_seleccionadas[0]->Cells[1]->Value);
+			double precio = Convert::ToDouble(filas_seleccionadas[0]->Cells[1]->Value);
 
 			this->subtotal -= cantidad * precio;
 			this->total -= cantidad * precio;

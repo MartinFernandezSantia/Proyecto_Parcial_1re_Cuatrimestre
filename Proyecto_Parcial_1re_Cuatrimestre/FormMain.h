@@ -35,8 +35,10 @@ namespace CppCLRWinFormsProject {
 			}
 		}
     private: System::Windows::Forms::TabPage^ tabClientes;
+    public: System::Windows::Forms::DataGridView^ dataGridClientes;
+    private:
     protected:
-    public: System::Windows::Forms::DataGridView^ dataGridView1;
+
     private:
 
     public:
@@ -48,8 +50,10 @@ namespace CppCLRWinFormsProject {
     public: System::Windows::Forms::TextBox^ textBox2;
 
     public: System::Windows::Forms::TextBox^ textBox4;
-    public: System::Windows::Forms::Button^ button1;
-    public: System::Windows::Forms::Button^ button2;
+    public: System::Windows::Forms::Button^ buttonEliminarCliente;
+
+    public: System::Windows::Forms::Button^ buttonAgregarCliente;
+
 
     public:
     private: System::Windows::Forms::Label^ label5;
@@ -109,16 +113,20 @@ namespace CppCLRWinFormsProject {
     private: System::Windows::Forms::Label^ labelIdProducto;
     private: System::Windows::Forms::TabControl^ tabControl1;
     private: System::Windows::Forms::TabPage^ tabEmpleado;
-    public: System::Windows::Forms::DataGridView^ dataGridView2;
+    public: System::Windows::Forms::DataGridView^ dataGridEmpleado;
+    private:
+
+public: System::Windows::Forms::Button^ buttonEliminarEmpleado;
     private:
 
     public:
 
 
 
-    public: System::Windows::Forms::Button^ button3;
+
+public: System::Windows::Forms::Button^ buttonAgregarEmpleado;
     private:
-    public: System::Windows::Forms::Button^ button4;
+
     private: System::Windows::Forms::Label^ label8;
     public:
     public: System::Windows::Forms::TextBox^ textBox5;
@@ -136,17 +144,21 @@ namespace CppCLRWinFormsProject {
     public: System::Windows::Forms::TextBox^ textBox8;
     private:
     private: System::Windows::Forms::TabPage^ tabProveedores;
+public: System::Windows::Forms::DataGridView^ dataGridProveedores;
+public: System::Windows::Forms::Button^ buttonEliminarProveedores;
+private:
     public:
-    public: System::Windows::Forms::DataGridView^ dataGridView3;
+
     private:
 
     public:
 
 
 
-    public: System::Windows::Forms::Button^ button5;
+
+public: System::Windows::Forms::Button^ buttonAgregarProveedores;
     private:
-    public: System::Windows::Forms::Button^ button6;
+
     private: System::Windows::Forms::Label^ label12;
     public:
     public: System::Windows::Forms::TextBox^ textBox9;
@@ -333,60 +345,69 @@ public:
             System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
             System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
             this->tabClientes = (gcnew System::Windows::Forms::TabPage());
-            this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-            this->label7 = (gcnew System::Windows::Forms::Label());
-            this->label6 = (gcnew System::Windows::Forms::Label());
-            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-            this->label5 = (gcnew System::Windows::Forms::Label());
+            this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+            this->label4 = (gcnew System::Windows::Forms::Label());
+            this->dataGridClientes = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-            this->button2 = (gcnew System::Windows::Forms::Button());
-            this->button1 = (gcnew System::Windows::Forms::Button());
-            this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+            this->buttonEliminarCliente = (gcnew System::Windows::Forms::Button());
+            this->buttonAgregarCliente = (gcnew System::Windows::Forms::Button());
+            this->label5 = (gcnew System::Windows::Forms::Label());
+            this->label6 = (gcnew System::Windows::Forms::Label());
+            this->label7 = (gcnew System::Windows::Forms::Label());
             this->tabFacturacion = (gcnew System::Windows::Forms::TabPage());
-            this->inputIdCliente = (gcnew System::Windows::Forms::TextBox());
-            this->labelIdCliente = (gcnew System::Windows::Forms::Label());
-            this->inputIdEmpleado = (gcnew System::Windows::Forms::TextBox());
-            this->labelIdEmpleado = (gcnew System::Windows::Forms::Label());
-            this->inputPrecioFacturacion = (gcnew System::Windows::Forms::TextBox());
-            this->labelPrecioFacturacion = (gcnew System::Windows::Forms::Label());
-            this->inputProducto = (gcnew System::Windows::Forms::TextBox());
-            this->labelProducto = (gcnew System::Windows::Forms::Label());
-            this->inputCantidadFacturacion = (gcnew System::Windows::Forms::TextBox());
-            this->labelCantidadFacturacion = (gcnew System::Windows::Forms::Label());
-            this->buttonAgregarFacturacion = (gcnew System::Windows::Forms::Button());
-            this->buttonEliminarFacturacion = (gcnew System::Windows::Forms::Button());
-            this->dataGridFacturacion = (gcnew System::Windows::Forms::DataGridView());
-            this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->inputDescuento = (gcnew System::Windows::Forms::TextBox());
-            this->label1 = (gcnew System::Windows::Forms::Label());
-            this->buttonAplicarDescuento = (gcnew System::Windows::Forms::Button());
-            this->inputSubtotal = (gcnew System::Windows::Forms::TextBox());
-            this->label2 = (gcnew System::Windows::Forms::Label());
-            this->inputTotal = (gcnew System::Windows::Forms::TextBox());
             this->label3 = (gcnew System::Windows::Forms::Label());
+            this->inputTotal = (gcnew System::Windows::Forms::TextBox());
+            this->inputSubtotal = (gcnew System::Windows::Forms::TextBox());
+            this->inputDescuento = (gcnew System::Windows::Forms::TextBox());
+            this->dataGridFacturacion = (gcnew System::Windows::Forms::DataGridView());
+            this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->inputCantidadFacturacion = (gcnew System::Windows::Forms::TextBox());
+            this->inputProducto = (gcnew System::Windows::Forms::TextBox());
+            this->inputPrecioFacturacion = (gcnew System::Windows::Forms::TextBox());
+            this->inputIdEmpleado = (gcnew System::Windows::Forms::TextBox());
+            this->inputIdCliente = (gcnew System::Windows::Forms::TextBox());
+            this->label2 = (gcnew System::Windows::Forms::Label());
+            this->buttonAplicarDescuento = (gcnew System::Windows::Forms::Button());
+            this->label1 = (gcnew System::Windows::Forms::Label());
+            this->buttonEliminarFacturacion = (gcnew System::Windows::Forms::Button());
+            this->buttonAgregarFacturacion = (gcnew System::Windows::Forms::Button());
+            this->labelCantidadFacturacion = (gcnew System::Windows::Forms::Label());
+            this->labelProducto = (gcnew System::Windows::Forms::Label());
+            this->labelPrecioFacturacion = (gcnew System::Windows::Forms::Label());
+            this->labelIdEmpleado = (gcnew System::Windows::Forms::Label());
+            this->labelIdCliente = (gcnew System::Windows::Forms::Label());
             this->tabStock = (gcnew System::Windows::Forms::TabPage());
-            this->inputIdProducto = (gcnew System::Windows::Forms::TextBox());
-            this->labelIdProducto = (gcnew System::Windows::Forms::Label());
-            this->inputCantidad = (gcnew System::Windows::Forms::TextBox());
-            this->labelPrecio = (gcnew System::Windows::Forms::Label());
-            this->inputPrecio = (gcnew System::Windows::Forms::TextBox());
-            this->labelNombre = (gcnew System::Windows::Forms::Label());
-            this->inputNombre = (gcnew System::Windows::Forms::TextBox());
-            this->labelCantidad = (gcnew System::Windows::Forms::Label());
-            this->buttonAgregar = (gcnew System::Windows::Forms::Button());
-            this->buttonEliminar = (gcnew System::Windows::Forms::Button());
             this->dataGridStock = (gcnew System::Windows::Forms::DataGridView());
-            this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->inputNombre = (gcnew System::Windows::Forms::TextBox());
+            this->inputPrecio = (gcnew System::Windows::Forms::TextBox());
+            this->inputCantidad = (gcnew System::Windows::Forms::TextBox());
+            this->inputIdProducto = (gcnew System::Windows::Forms::TextBox());
+            this->buttonEliminar = (gcnew System::Windows::Forms::Button());
+            this->buttonAgregar = (gcnew System::Windows::Forms::Button());
+            this->labelCantidad = (gcnew System::Windows::Forms::Label());
+            this->labelNombre = (gcnew System::Windows::Forms::Label());
+            this->labelPrecio = (gcnew System::Windows::Forms::Label());
+            this->labelIdProducto = (gcnew System::Windows::Forms::Label());
             this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
             this->tabEmpleado = (gcnew System::Windows::Forms::TabPage());
-            this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-            this->button3 = (gcnew System::Windows::Forms::Button());
-            this->button4 = (gcnew System::Windows::Forms::Button());
+            this->dataGridEmpleado = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->buttonEliminarEmpleado = (gcnew System::Windows::Forms::Button());
+            this->buttonAgregarEmpleado = (gcnew System::Windows::Forms::Button());
             this->label8 = (gcnew System::Windows::Forms::Label());
             this->textBox5 = (gcnew System::Windows::Forms::TextBox());
             this->label9 = (gcnew System::Windows::Forms::Label());
@@ -396,9 +417,13 @@ public:
             this->label11 = (gcnew System::Windows::Forms::Label());
             this->textBox8 = (gcnew System::Windows::Forms::TextBox());
             this->tabProveedores = (gcnew System::Windows::Forms::TabPage());
-            this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
-            this->button5 = (gcnew System::Windows::Forms::Button());
-            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->dataGridProveedores = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->buttonEliminarProveedores = (gcnew System::Windows::Forms::Button());
+            this->buttonAgregarProveedores = (gcnew System::Windows::Forms::Button());
             this->label12 = (gcnew System::Windows::Forms::Label());
             this->textBox9 = (gcnew System::Windows::Forms::TextBox());
             this->label13 = (gcnew System::Windows::Forms::Label());
@@ -407,30 +432,17 @@ public:
             this->textBox11 = (gcnew System::Windows::Forms::TextBox());
             this->label15 = (gcnew System::Windows::Forms::Label());
             this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-            this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-            this->label4 = (gcnew System::Windows::Forms::Label());
-            this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->tabClientes->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridClientes))->BeginInit();
             this->tabFacturacion->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridFacturacion))->BeginInit();
             this->tabStock->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridStock))->BeginInit();
             this->tabControl1->SuspendLayout();
             this->tabEmpleado->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridEmpleado))->BeginInit();
             this->tabProveedores->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridProveedores))->BeginInit();
             this->SuspendLayout();
             // 
             // tabClientes
@@ -439,12 +451,12 @@ public:
                 static_cast<System::Int32>(static_cast<System::Byte>(30)));
             this->tabClientes->Controls->Add(this->textBox3);
             this->tabClientes->Controls->Add(this->label4);
-            this->tabClientes->Controls->Add(this->dataGridView1);
+            this->tabClientes->Controls->Add(this->dataGridClientes);
             this->tabClientes->Controls->Add(this->textBox1);
             this->tabClientes->Controls->Add(this->textBox2);
             this->tabClientes->Controls->Add(this->textBox4);
-            this->tabClientes->Controls->Add(this->button1);
-            this->tabClientes->Controls->Add(this->button2);
+            this->tabClientes->Controls->Add(this->buttonEliminarCliente);
+            this->tabClientes->Controls->Add(this->buttonAgregarCliente);
             this->tabClientes->Controls->Add(this->label5);
             this->tabClientes->Controls->Add(this->label6);
             this->tabClientes->Controls->Add(this->label7);
@@ -456,72 +468,100 @@ public:
             this->tabClientes->TabIndex = 5;
             this->tabClientes->Text = L"Clientes";
             // 
-            // textBox4
+            // textBox3
             // 
-            this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->textBox4->ForeColor = System::Drawing::SystemColors::Window;
-            this->textBox4->Location = System::Drawing::Point(13, 48);
-            this->textBox4->Margin = System::Windows::Forms::Padding(4);
-            this->textBox4->Name = L"textBox4";
-            this->textBox4->Size = System::Drawing::Size(353, 30);
-            this->textBox4->TabIndex = 12;
+            this->textBox3->ForeColor = System::Drawing::SystemColors::Window;
+            this->textBox3->Location = System::Drawing::Point(433, 118);
+            this->textBox3->Margin = System::Windows::Forms::Padding(4);
+            this->textBox3->Name = L"textBox3";
+            this->textBox3->Size = System::Drawing::Size(353, 30);
+            this->textBox3->TabIndex = 24;
             // 
-            // label7
+            // label4
             // 
-            this->label7->AutoSize = true;
-            this->label7->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->label4->AutoSize = true;
+            this->label4->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label7->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label7->Location = System::Drawing::Point(9, 22);
-            this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label7->Name = L"label7";
-            this->label7->Size = System::Drawing::Size(96, 22);
-            this->label7->TabIndex = 13;
-            this->label7->Text = L"ID Cliente";
+            this->label4->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label4->Location = System::Drawing::Point(429, 92);
+            this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label4->Name = L"label4";
+            this->label4->Size = System::Drawing::Size(79, 22);
+            this->label4->TabIndex = 25;
+            this->label4->Text = L"Apellido";
             // 
-            // label6
+            // dataGridClientes
             // 
-            this->label6->AutoSize = true;
-            this->label6->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label6->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label6->Location = System::Drawing::Point(9, 92);
-            this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(43, 22);
-            this->label6->TabIndex = 15;
-            this->label6->Text = L"DNI";
-            // 
-            // textBox2
-            // 
-            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->dataGridClientes->AllowUserToAddRows = false;
+            this->dataGridClientes->AllowUserToDeleteRows = false;
+            this->dataGridClientes->AllowUserToResizeRows = false;
+            this->dataGridClientes->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+            this->dataGridClientes->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+                static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
+            this->dataGridClientes->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+            this->dataGridClientes->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+            dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::Window;
+            dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+            dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::Window;
+            dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+            this->dataGridClientes->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this->dataGridClientes->ColumnHeadersHeight = 30;
+            this->dataGridClientes->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+                this->dataGridViewTextBoxColumn1,
+                    this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3
+            });
+            this->dataGridClientes->Dock = System::Windows::Forms::DockStyle::Bottom;
+            this->dataGridClientes->EnableHeadersVisualStyles = false;
+            this->dataGridClientes->GridColor = System::Drawing::SystemColors::Control;
+            this->dataGridClientes->Location = System::Drawing::Point(3, 274);
+            this->dataGridClientes->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->dataGridClientes->Name = L"dataGridClientes";
+            this->dataGridClientes->RightToLeft = System::Windows::Forms::RightToLeft::No;
+            this->dataGridClientes->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+            dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+            dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->textBox2->ForeColor = System::Drawing::SystemColors::Window;
-            this->textBox2->Location = System::Drawing::Point(433, 48);
-            this->textBox2->Margin = System::Windows::Forms::Padding(4);
-            this->textBox2->Name = L"textBox2";
-            this->textBox2->Size = System::Drawing::Size(353, 30);
-            this->textBox2->TabIndex = 14;
+            dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+            dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+            dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+            dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+            this->dataGridClientes->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this->dataGridClientes->RowHeadersWidth = 51;
+            this->dataGridClientes->RowTemplate->Height = 24;
+            this->dataGridClientes->Size = System::Drawing::Size(794, 244);
+            this->dataGridClientes->TabIndex = 23;
             // 
-            // label5
+            // dataGridViewTextBoxColumn1
             // 
-            this->label5->AutoSize = true;
-            this->label5->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label5->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label5->Location = System::Drawing::Point(429, 22);
-            this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label5->Name = L"label5";
-            this->label5->Size = System::Drawing::Size(79, 22);
-            this->label5->TabIndex = 17;
-            this->label5->Text = L"Nombre";
+            this->dataGridViewTextBoxColumn1->HeaderText = L"ID Cliente";
+            this->dataGridViewTextBoxColumn1->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+            this->dataGridViewTextBoxColumn1->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this->dataGridViewTextBoxColumn2->HeaderText = L"Nombre completo";
+            this->dataGridViewTextBoxColumn2->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+            this->dataGridViewTextBoxColumn2->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this->dataGridViewTextBoxColumn3->HeaderText = L"DNI";
+            this->dataGridViewTextBoxColumn3->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+            this->dataGridViewTextBoxColumn3->ReadOnly = true;
             // 
             // textBox1
             // 
@@ -537,94 +577,114 @@ public:
             this->textBox1->Size = System::Drawing::Size(353, 30);
             this->textBox1->TabIndex = 13;
             // 
-            // button2
+            // textBox2
             // 
-            this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)), static_cast<System::Int32>(static_cast<System::Byte>(98)),
-                static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button2->FlatAppearance->BorderSize = 0;
-            this->button2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
-                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
-            this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
-                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
-            this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button2->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button2->Location = System::Drawing::Point(13, 206);
-            this->button2->Margin = System::Windows::Forms::Padding(4);
-            this->button2->Name = L"button2";
-            this->button2->Size = System::Drawing::Size(353, 39);
-            this->button2->TabIndex = 21;
-            this->button2->Text = L"+";
-            this->button2->UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-                static_cast<System::Int32>(static_cast<System::Byte>(23)));
-            this->button1->FlatAppearance->BorderSize = 0;
-            this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
-                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
-            this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
-                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
-            this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button1->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button1->Location = System::Drawing::Point(433, 206);
-            this->button1->Margin = System::Windows::Forms::Padding(4);
-            this->button1->Name = L"button1";
-            this->button1->Size = System::Drawing::Size(353, 39);
-            this->button1->TabIndex = 22;
-            this->button1->Text = L"-";
-            this->button1->UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this->dataGridView1->AllowUserToAddRows = false;
-            this->dataGridView1->AllowUserToDeleteRows = false;
-            this->dataGridView1->AllowUserToResizeRows = false;
-            this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-            this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
-                static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
-            this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-            this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-            dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-            dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::Window;
-            dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-            dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::Window;
-            dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this->dataGridView1->ColumnHeadersHeight = 30;
-            this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
-                this->dataGridViewTextBoxColumn1,
-                    this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3
-            });
-            this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
-            this->dataGridView1->EnableHeadersVisualStyles = false;
-            this->dataGridView1->GridColor = System::Drawing::SystemColors::Control;
-            this->dataGridView1->Location = System::Drawing::Point(3, 274);
-            this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->dataGridView1->Name = L"dataGridView1";
-            this->dataGridView1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-            this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-            dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-            dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-            dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-            dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-            dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-            dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this->dataGridView1->RowHeadersWidth = 51;
-            this->dataGridView1->RowTemplate->Height = 24;
-            this->dataGridView1->Size = System::Drawing::Size(794, 244);
-            this->dataGridView1->TabIndex = 23;
+            this->textBox2->ForeColor = System::Drawing::SystemColors::Window;
+            this->textBox2->Location = System::Drawing::Point(433, 48);
+            this->textBox2->Margin = System::Windows::Forms::Padding(4);
+            this->textBox2->Name = L"textBox2";
+            this->textBox2->Size = System::Drawing::Size(353, 30);
+            this->textBox2->TabIndex = 14;
+            // 
+            // textBox4
+            // 
+            this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox4->ForeColor = System::Drawing::SystemColors::Window;
+            this->textBox4->Location = System::Drawing::Point(13, 48);
+            this->textBox4->Margin = System::Windows::Forms::Padding(4);
+            this->textBox4->Name = L"textBox4";
+            this->textBox4->Size = System::Drawing::Size(353, 30);
+            this->textBox4->TabIndex = 12;
+            // 
+            // buttonEliminarCliente
+            // 
+            this->buttonEliminarCliente->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)));
+            this->buttonEliminarCliente->FlatAppearance->BorderSize = 0;
+            this->buttonEliminarCliente->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
+                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
+            this->buttonEliminarCliente->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
+                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
+            this->buttonEliminarCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonEliminarCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->buttonEliminarCliente->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonEliminarCliente->Location = System::Drawing::Point(433, 206);
+            this->buttonEliminarCliente->Margin = System::Windows::Forms::Padding(4);
+            this->buttonEliminarCliente->Name = L"buttonEliminarCliente";
+            this->buttonEliminarCliente->Size = System::Drawing::Size(353, 39);
+            this->buttonEliminarCliente->TabIndex = 22;
+            this->buttonEliminarCliente->Text = L"-";
+            this->buttonEliminarCliente->UseVisualStyleBackColor = false;
+            // 
+            // buttonAgregarCliente
+            // 
+            this->buttonAgregarCliente->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+            this->buttonAgregarCliente->FlatAppearance->BorderSize = 0;
+            this->buttonAgregarCliente->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
+                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
+            this->buttonAgregarCliente->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->buttonAgregarCliente->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonAgregarCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->buttonAgregarCliente->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonAgregarCliente->Location = System::Drawing::Point(13, 206);
+            this->buttonAgregarCliente->Margin = System::Windows::Forms::Padding(4);
+            this->buttonAgregarCliente->Name = L"buttonAgregarCliente";
+            this->buttonAgregarCliente->Size = System::Drawing::Size(353, 39);
+            this->buttonAgregarCliente->TabIndex = 21;
+            this->buttonAgregarCliente->Text = L"+";
+            this->buttonAgregarCliente->UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this->label5->AutoSize = true;
+            this->label5->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label5->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label5->Location = System::Drawing::Point(429, 22);
+            this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label5->Name = L"label5";
+            this->label5->Size = System::Drawing::Size(79, 22);
+            this->label5->TabIndex = 17;
+            this->label5->Text = L"Nombre";
+            // 
+            // label6
+            // 
+            this->label6->AutoSize = true;
+            this->label6->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label6->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label6->Location = System::Drawing::Point(9, 92);
+            this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(43, 22);
+            this->label6->TabIndex = 15;
+            this->label6->Text = L"DNI";
+            // 
+            // label7
+            // 
+            this->label7->AutoSize = true;
+            this->label7->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label7->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label7->Location = System::Drawing::Point(9, 22);
+            this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label7->Name = L"label7";
+            this->label7->Size = System::Drawing::Size(96, 22);
+            this->label7->TabIndex = 13;
+            this->label7->Text = L"ID Cliente";
             // 
             // tabFacturacion
             // 
@@ -659,182 +719,64 @@ public:
             this->tabFacturacion->TabIndex = 1;
             this->tabFacturacion->Text = L"Facturacion";
             // 
-            // inputIdCliente
+            // label3
             // 
-            this->inputIdCliente->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->label3->AutoSize = true;
+            this->label3->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label3->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label3->Location = System::Drawing::Point(463, 443);
+            this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label3->Name = L"label3";
+            this->label3->Size = System::Drawing::Size(52, 22);
+            this->label3->TabIndex = 33;
+            this->label3->Text = L"Total";
+            // 
+            // inputTotal
+            // 
+            this->inputTotal->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputIdCliente->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputIdCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->inputTotal->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputTotal->Enabled = false;
+            this->inputTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputIdCliente->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputIdCliente->Location = System::Drawing::Point(15, 43);
-            this->inputIdCliente->Margin = System::Windows::Forms::Padding(4);
-            this->inputIdCliente->Name = L"inputIdCliente";
-            this->inputIdCliente->Size = System::Drawing::Size(353, 30);
-            this->inputIdCliente->TabIndex = 14;
+            this->inputTotal->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputTotal->Location = System::Drawing::Point(524, 438);
+            this->inputTotal->Margin = System::Windows::Forms::Padding(4);
+            this->inputTotal->Name = L"inputTotal";
+            this->inputTotal->Size = System::Drawing::Size(262, 30);
+            this->inputTotal->TabIndex = 32;
+            this->inputTotal->Text = L"$0";
             // 
-            // labelIdCliente
+            // inputSubtotal
             // 
-            this->labelIdCliente->AutoSize = true;
-            this->labelIdCliente->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelIdCliente->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelIdCliente->Location = System::Drawing::Point(11, 17);
-            this->labelIdCliente->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelIdCliente->Name = L"labelIdCliente";
-            this->labelIdCliente->Size = System::Drawing::Size(96, 22);
-            this->labelIdCliente->TabIndex = 15;
-            this->labelIdCliente->Text = L"ID Cliente";
-            // 
-            // inputIdEmpleado
-            // 
-            this->inputIdEmpleado->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->inputSubtotal->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputIdEmpleado->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputIdEmpleado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->inputSubtotal->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputSubtotal->Enabled = false;
+            this->inputSubtotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputIdEmpleado->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputIdEmpleado->Location = System::Drawing::Point(15, 105);
-            this->inputIdEmpleado->Margin = System::Windows::Forms::Padding(4);
-            this->inputIdEmpleado->Name = L"inputIdEmpleado";
-            this->inputIdEmpleado->Size = System::Drawing::Size(353, 30);
-            this->inputIdEmpleado->TabIndex = 15;
+            this->inputSubtotal->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputSubtotal->Location = System::Drawing::Point(524, 370);
+            this->inputSubtotal->Margin = System::Windows::Forms::Padding(4);
+            this->inputSubtotal->Name = L"inputSubtotal";
+            this->inputSubtotal->Size = System::Drawing::Size(262, 30);
+            this->inputSubtotal->TabIndex = 30;
+            this->inputSubtotal->Text = L"$0";
             // 
-            // labelIdEmpleado
+            // inputDescuento
             // 
-            this->labelIdEmpleado->AutoSize = true;
-            this->labelIdEmpleado->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelIdEmpleado->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelIdEmpleado->Location = System::Drawing::Point(11, 79);
-            this->labelIdEmpleado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelIdEmpleado->Name = L"labelIdEmpleado";
-            this->labelIdEmpleado->Size = System::Drawing::Size(124, 22);
-            this->labelIdEmpleado->TabIndex = 17;
-            this->labelIdEmpleado->Text = L"ID Empleado";
-            // 
-            // inputPrecioFacturacion
-            // 
-            this->inputPrecioFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputPrecioFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputPrecioFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->inputPrecioFacturacion->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputPrecioFacturacion->Location = System::Drawing::Point(433, 43);
-            this->inputPrecioFacturacion->Margin = System::Windows::Forms::Padding(4);
-            this->inputPrecioFacturacion->Name = L"inputPrecioFacturacion";
-            this->inputPrecioFacturacion->Size = System::Drawing::Size(353, 30);
-            this->inputPrecioFacturacion->TabIndex = 17;
-            // 
-            // labelPrecioFacturacion
-            // 
-            this->labelPrecioFacturacion->AutoSize = true;
-            this->labelPrecioFacturacion->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelPrecioFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelPrecioFacturacion->Location = System::Drawing::Point(429, 18);
-            this->labelPrecioFacturacion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelPrecioFacturacion->Name = L"labelPrecioFacturacion";
-            this->labelPrecioFacturacion->Size = System::Drawing::Size(66, 22);
-            this->labelPrecioFacturacion->TabIndex = 19;
-            this->labelPrecioFacturacion->Text = L"Precio";
-            // 
-            // inputProducto
-            // 
-            this->inputProducto->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->inputDescuento->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputProducto->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->inputDescuento->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputDescuento->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputProducto->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputProducto->Location = System::Drawing::Point(15, 166);
-            this->inputProducto->Margin = System::Windows::Forms::Padding(4);
-            this->inputProducto->Name = L"inputProducto";
-            this->inputProducto->Size = System::Drawing::Size(353, 30);
-            this->inputProducto->TabIndex = 16;
-            // 
-            // labelProducto
-            // 
-            this->labelProducto->AutoSize = true;
-            this->labelProducto->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelProducto->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelProducto->Location = System::Drawing::Point(11, 140);
-            this->labelProducto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelProducto->Name = L"labelProducto";
-            this->labelProducto->Size = System::Drawing::Size(89, 22);
-            this->labelProducto->TabIndex = 21;
-            this->labelProducto->Text = L"Producto";
-            // 
-            // inputCantidadFacturacion
-            // 
-            this->inputCantidadFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputCantidadFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputCantidadFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->inputCantidadFacturacion->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputCantidadFacturacion->Location = System::Drawing::Point(433, 105);
-            this->inputCantidadFacturacion->Margin = System::Windows::Forms::Padding(4);
-            this->inputCantidadFacturacion->Name = L"inputCantidadFacturacion";
-            this->inputCantidadFacturacion->Size = System::Drawing::Size(353, 30);
-            this->inputCantidadFacturacion->TabIndex = 18;
-            // 
-            // labelCantidadFacturacion
-            // 
-            this->labelCantidadFacturacion->AutoSize = true;
-            this->labelCantidadFacturacion->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->labelCantidadFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelCantidadFacturacion->Location = System::Drawing::Point(429, 79);
-            this->labelCantidadFacturacion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelCantidadFacturacion->Name = L"labelCantidadFacturacion";
-            this->labelCantidadFacturacion->Size = System::Drawing::Size(88, 22);
-            this->labelCantidadFacturacion->TabIndex = 23;
-            this->labelCantidadFacturacion->Text = L"Cantidad";
-            // 
-            // buttonAgregarFacturacion
-            // 
-            this->buttonAgregarFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)),
-                static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->buttonAgregarFacturacion->FlatAppearance->BorderSize = 0;
-            this->buttonAgregarFacturacion->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
-                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
-            this->buttonAgregarFacturacion->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
-                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
-            this->buttonAgregarFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->buttonAgregarFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->buttonAgregarFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->buttonAgregarFacturacion->Location = System::Drawing::Point(433, 161);
-            this->buttonAgregarFacturacion->Margin = System::Windows::Forms::Padding(4);
-            this->buttonAgregarFacturacion->Name = L"buttonAgregarFacturacion";
-            this->buttonAgregarFacturacion->Size = System::Drawing::Size(164, 39);
-            this->buttonAgregarFacturacion->TabIndex = 24;
-            this->buttonAgregarFacturacion->Text = L"+";
-            this->buttonAgregarFacturacion->UseVisualStyleBackColor = false;
-            // 
-            // buttonEliminarFacturacion
-            // 
-            this->buttonEliminarFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)),
-                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)));
-            this->buttonEliminarFacturacion->FlatAppearance->BorderSize = 0;
-            this->buttonEliminarFacturacion->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
-                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
-            this->buttonEliminarFacturacion->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
-                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
-            this->buttonEliminarFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->buttonEliminarFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->buttonEliminarFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->buttonEliminarFacturacion->Location = System::Drawing::Point(623, 161);
-            this->buttonEliminarFacturacion->Margin = System::Windows::Forms::Padding(4);
-            this->buttonEliminarFacturacion->Name = L"buttonEliminarFacturacion";
-            this->buttonEliminarFacturacion->Size = System::Drawing::Size(164, 39);
-            this->buttonEliminarFacturacion->TabIndex = 25;
-            this->buttonEliminarFacturacion->Text = L"-";
-            this->buttonEliminarFacturacion->UseVisualStyleBackColor = false;
+            this->inputDescuento->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputDescuento->Location = System::Drawing::Point(433, 271);
+            this->inputDescuento->Margin = System::Windows::Forms::Padding(4);
+            this->inputDescuento->Name = L"inputDescuento";
+            this->inputDescuento->Size = System::Drawing::Size(198, 30);
+            this->inputDescuento->TabIndex = 19;
             // 
             // dataGridFacturacion
             // 
@@ -883,11 +825,11 @@ public:
             this->dataGridFacturacion->Size = System::Drawing::Size(377, 262);
             this->dataGridFacturacion->TabIndex = 26;
             // 
-            // Column7
+            // Column5
             // 
-            this->Column7->HeaderText = L"Cantidad";
-            this->Column7->MinimumWidth = 6;
-            this->Column7->Name = L"Column7";
+            this->Column5->HeaderText = L"Producto";
+            this->Column5->MinimumWidth = 6;
+            this->Column5->Name = L"Column5";
             // 
             // Column6
             // 
@@ -895,38 +837,94 @@ public:
             this->Column6->MinimumWidth = 6;
             this->Column6->Name = L"Column6";
             // 
-            // Column5
+            // Column7
             // 
-            this->Column5->HeaderText = L"Producto";
-            this->Column5->MinimumWidth = 6;
-            this->Column5->Name = L"Column5";
+            this->Column7->HeaderText = L"Cantidad";
+            this->Column7->MinimumWidth = 6;
+            this->Column7->Name = L"Column7";
             // 
-            // inputDescuento
+            // inputCantidadFacturacion
             // 
-            this->inputDescuento->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+            this->inputCantidadFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputCantidadFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputCantidadFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->inputCantidadFacturacion->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputCantidadFacturacion->Location = System::Drawing::Point(433, 105);
+            this->inputCantidadFacturacion->Margin = System::Windows::Forms::Padding(4);
+            this->inputCantidadFacturacion->Name = L"inputCantidadFacturacion";
+            this->inputCantidadFacturacion->Size = System::Drawing::Size(353, 30);
+            this->inputCantidadFacturacion->TabIndex = 18;
+            // 
+            // inputProducto
+            // 
+            this->inputProducto->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputDescuento->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputDescuento->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->inputProducto->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputDescuento->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputDescuento->Location = System::Drawing::Point(433, 271);
-            this->inputDescuento->Margin = System::Windows::Forms::Padding(4);
-            this->inputDescuento->Name = L"inputDescuento";
-            this->inputDescuento->Size = System::Drawing::Size(198, 30);
-            this->inputDescuento->TabIndex = 19;
+            this->inputProducto->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputProducto->Location = System::Drawing::Point(15, 166);
+            this->inputProducto->Margin = System::Windows::Forms::Padding(4);
+            this->inputProducto->Name = L"inputProducto";
+            this->inputProducto->Size = System::Drawing::Size(353, 30);
+            this->inputProducto->TabIndex = 16;
             // 
-            // label1
+            // inputPrecioFacturacion
             // 
-            this->label1->AutoSize = true;
-            this->label1->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->inputPrecioFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputPrecioFacturacion->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputPrecioFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->inputPrecioFacturacion->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputPrecioFacturacion->Location = System::Drawing::Point(433, 43);
+            this->inputPrecioFacturacion->Margin = System::Windows::Forms::Padding(4);
+            this->inputPrecioFacturacion->Name = L"inputPrecioFacturacion";
+            this->inputPrecioFacturacion->Size = System::Drawing::Size(353, 30);
+            this->inputPrecioFacturacion->TabIndex = 17;
+            // 
+            // inputIdEmpleado
+            // 
+            this->inputIdEmpleado->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputIdEmpleado->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputIdEmpleado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label1->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label1->Location = System::Drawing::Point(429, 246);
-            this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(103, 22);
-            this->label1->TabIndex = 28;
-            this->label1->Text = L"Descuento";
+            this->inputIdEmpleado->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputIdEmpleado->Location = System::Drawing::Point(15, 105);
+            this->inputIdEmpleado->Margin = System::Windows::Forms::Padding(4);
+            this->inputIdEmpleado->Name = L"inputIdEmpleado";
+            this->inputIdEmpleado->Size = System::Drawing::Size(353, 30);
+            this->inputIdEmpleado->TabIndex = 15;
+            // 
+            // inputIdCliente
+            // 
+            this->inputIdCliente->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputIdCliente->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputIdCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputIdCliente->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputIdCliente->Location = System::Drawing::Point(15, 43);
+            this->inputIdCliente->Margin = System::Windows::Forms::Padding(4);
+            this->inputIdCliente->Name = L"inputIdCliente";
+            this->inputIdCliente->Size = System::Drawing::Size(353, 30);
+            this->inputIdCliente->TabIndex = 14;
+            // 
+            // label2
+            // 
+            this->label2->AutoSize = true;
+            this->label2->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label2->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label2->Location = System::Drawing::Point(429, 375);
+            this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label2->Name = L"label2";
+            this->label2->Size = System::Drawing::Size(82, 22);
+            this->label2->TabIndex = 31;
+            this->label2->Text = L"Subtotal";
             // 
             // buttonAplicarDescuento
             // 
@@ -944,63 +942,125 @@ public:
             this->buttonAplicarDescuento->Text = L"Aplicar";
             this->buttonAplicarDescuento->UseVisualStyleBackColor = false;
             // 
-            // inputSubtotal
+            // label1
             // 
-            this->inputSubtotal->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputSubtotal->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputSubtotal->Enabled = false;
-            this->inputSubtotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->label1->AutoSize = true;
+            this->label1->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputSubtotal->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputSubtotal->Location = System::Drawing::Point(524, 370);
-            this->inputSubtotal->Margin = System::Windows::Forms::Padding(4);
-            this->inputSubtotal->Name = L"inputSubtotal";
-            this->inputSubtotal->Size = System::Drawing::Size(262, 30);
-            this->inputSubtotal->TabIndex = 30;
-            this->inputSubtotal->Text = L"$0";
+            this->label1->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->label1->Location = System::Drawing::Point(429, 246);
+            this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label1->Name = L"label1";
+            this->label1->Size = System::Drawing::Size(103, 22);
+            this->label1->TabIndex = 28;
+            this->label1->Text = L"Descuento";
             // 
-            // label2
+            // buttonEliminarFacturacion
             // 
-            this->label2->AutoSize = true;
-            this->label2->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->buttonEliminarFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)));
+            this->buttonEliminarFacturacion->FlatAppearance->BorderSize = 0;
+            this->buttonEliminarFacturacion->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
+                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
+            this->buttonEliminarFacturacion->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
+                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
+            this->buttonEliminarFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonEliminarFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->buttonEliminarFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonEliminarFacturacion->Location = System::Drawing::Point(623, 161);
+            this->buttonEliminarFacturacion->Margin = System::Windows::Forms::Padding(4);
+            this->buttonEliminarFacturacion->Name = L"buttonEliminarFacturacion";
+            this->buttonEliminarFacturacion->Size = System::Drawing::Size(164, 39);
+            this->buttonEliminarFacturacion->TabIndex = 25;
+            this->buttonEliminarFacturacion->Text = L"-";
+            this->buttonEliminarFacturacion->UseVisualStyleBackColor = false;
+            // 
+            // buttonAgregarFacturacion
+            // 
+            this->buttonAgregarFacturacion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+            this->buttonAgregarFacturacion->FlatAppearance->BorderSize = 0;
+            this->buttonAgregarFacturacion->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
+                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
+            this->buttonAgregarFacturacion->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->buttonAgregarFacturacion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonAgregarFacturacion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->buttonAgregarFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonAgregarFacturacion->Location = System::Drawing::Point(433, 161);
+            this->buttonAgregarFacturacion->Margin = System::Windows::Forms::Padding(4);
+            this->buttonAgregarFacturacion->Name = L"buttonAgregarFacturacion";
+            this->buttonAgregarFacturacion->Size = System::Drawing::Size(164, 39);
+            this->buttonAgregarFacturacion->TabIndex = 24;
+            this->buttonAgregarFacturacion->Text = L"+";
+            this->buttonAgregarFacturacion->UseVisualStyleBackColor = false;
+            // 
+            // labelCantidadFacturacion
+            // 
+            this->labelCantidadFacturacion->AutoSize = true;
+            this->labelCantidadFacturacion->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->labelCantidadFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelCantidadFacturacion->Location = System::Drawing::Point(429, 79);
+            this->labelCantidadFacturacion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelCantidadFacturacion->Name = L"labelCantidadFacturacion";
+            this->labelCantidadFacturacion->Size = System::Drawing::Size(88, 22);
+            this->labelCantidadFacturacion->TabIndex = 23;
+            this->labelCantidadFacturacion->Text = L"Cantidad";
+            // 
+            // labelProducto
+            // 
+            this->labelProducto->AutoSize = true;
+            this->labelProducto->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label2->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label2->Location = System::Drawing::Point(429, 375);
-            this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label2->Name = L"label2";
-            this->label2->Size = System::Drawing::Size(82, 22);
-            this->label2->TabIndex = 31;
-            this->label2->Text = L"Subtotal";
+            this->labelProducto->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelProducto->Location = System::Drawing::Point(11, 140);
+            this->labelProducto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelProducto->Name = L"labelProducto";
+            this->labelProducto->Size = System::Drawing::Size(89, 22);
+            this->labelProducto->TabIndex = 21;
+            this->labelProducto->Text = L"Producto";
             // 
-            // inputTotal
+            // labelPrecioFacturacion
             // 
-            this->inputTotal->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputTotal->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputTotal->Enabled = false;
-            this->inputTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->labelPrecioFacturacion->AutoSize = true;
+            this->labelPrecioFacturacion->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->inputTotal->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputTotal->Location = System::Drawing::Point(524, 438);
-            this->inputTotal->Margin = System::Windows::Forms::Padding(4);
-            this->inputTotal->Name = L"inputTotal";
-            this->inputTotal->Size = System::Drawing::Size(262, 30);
-            this->inputTotal->TabIndex = 32;
-            this->inputTotal->Text = L"$0";
+            this->labelPrecioFacturacion->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelPrecioFacturacion->Location = System::Drawing::Point(429, 18);
+            this->labelPrecioFacturacion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelPrecioFacturacion->Name = L"labelPrecioFacturacion";
+            this->labelPrecioFacturacion->Size = System::Drawing::Size(66, 22);
+            this->labelPrecioFacturacion->TabIndex = 19;
+            this->labelPrecioFacturacion->Text = L"Precio";
             // 
-            // label3
+            // labelIdEmpleado
             // 
-            this->label3->AutoSize = true;
-            this->label3->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->labelIdEmpleado->AutoSize = true;
+            this->labelIdEmpleado->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label3->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label3->Location = System::Drawing::Point(463, 443);
-            this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label3->Name = L"label3";
-            this->label3->Size = System::Drawing::Size(52, 22);
-            this->label3->TabIndex = 33;
-            this->label3->Text = L"Total";
+            this->labelIdEmpleado->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelIdEmpleado->Location = System::Drawing::Point(11, 79);
+            this->labelIdEmpleado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelIdEmpleado->Name = L"labelIdEmpleado";
+            this->labelIdEmpleado->Size = System::Drawing::Size(124, 22);
+            this->labelIdEmpleado->TabIndex = 17;
+            this->labelIdEmpleado->Text = L"ID Empleado";
+            // 
+            // labelIdCliente
+            // 
+            this->labelIdCliente->AutoSize = true;
+            this->labelIdCliente->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->labelIdCliente->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelIdCliente->Location = System::Drawing::Point(11, 17);
+            this->labelIdCliente->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelIdCliente->Name = L"labelIdCliente";
+            this->labelIdCliente->Size = System::Drawing::Size(96, 22);
+            this->labelIdCliente->TabIndex = 15;
+            this->labelIdCliente->Text = L"ID Cliente";
             // 
             // tabStock
             // 
@@ -1024,156 +1084,6 @@ public:
             this->tabStock->Size = System::Drawing::Size(800, 520);
             this->tabStock->TabIndex = 0;
             this->tabStock->Text = L"Stock";
-            // 
-            // inputIdProducto
-            // 
-            this->inputIdProducto->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputIdProducto->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputIdProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputIdProducto->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputIdProducto->Location = System::Drawing::Point(13, 48);
-            this->inputIdProducto->Margin = System::Windows::Forms::Padding(4);
-            this->inputIdProducto->Name = L"inputIdProducto";
-            this->inputIdProducto->Size = System::Drawing::Size(353, 30);
-            this->inputIdProducto->TabIndex = 12;
-            // 
-            // labelIdProducto
-            // 
-            this->labelIdProducto->AutoSize = true;
-            this->labelIdProducto->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelIdProducto->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelIdProducto->Location = System::Drawing::Point(9, 22);
-            this->labelIdProducto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelIdProducto->Name = L"labelIdProducto";
-            this->labelIdProducto->Size = System::Drawing::Size(115, 22);
-            this->labelIdProducto->TabIndex = 13;
-            this->labelIdProducto->Text = L"ID Producto";
-            // 
-            // inputCantidad
-            // 
-            this->inputCantidad->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputCantidad->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputCantidad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputCantidad->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputCantidad->Location = System::Drawing::Point(433, 118);
-            this->inputCantidad->Margin = System::Windows::Forms::Padding(4);
-            this->inputCantidad->Name = L"inputCantidad";
-            this->inputCantidad->Size = System::Drawing::Size(353, 30);
-            this->inputCantidad->TabIndex = 15;
-            // 
-            // labelPrecio
-            // 
-            this->labelPrecio->AutoSize = true;
-            this->labelPrecio->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelPrecio->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelPrecio->Location = System::Drawing::Point(429, 22);
-            this->labelPrecio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelPrecio->Name = L"labelPrecio";
-            this->labelPrecio->Size = System::Drawing::Size(66, 22);
-            this->labelPrecio->TabIndex = 15;
-            this->labelPrecio->Text = L"Precio";
-            // 
-            // inputPrecio
-            // 
-            this->inputPrecio->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputPrecio->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputPrecio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputPrecio->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputPrecio->Location = System::Drawing::Point(433, 48);
-            this->inputPrecio->Margin = System::Windows::Forms::Padding(4);
-            this->inputPrecio->Name = L"inputPrecio";
-            this->inputPrecio->Size = System::Drawing::Size(353, 30);
-            this->inputPrecio->TabIndex = 14;
-            // 
-            // labelNombre
-            // 
-            this->labelNombre->AutoSize = true;
-            this->labelNombre->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelNombre->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelNombre->Location = System::Drawing::Point(9, 92);
-            this->labelNombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelNombre->Name = L"labelNombre";
-            this->labelNombre->Size = System::Drawing::Size(79, 22);
-            this->labelNombre->TabIndex = 17;
-            this->labelNombre->Text = L"Nombre";
-            // 
-            // inputNombre
-            // 
-            this->inputNombre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->inputNombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->inputNombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputNombre->ForeColor = System::Drawing::SystemColors::Window;
-            this->inputNombre->Location = System::Drawing::Point(13, 118);
-            this->inputNombre->Margin = System::Windows::Forms::Padding(4);
-            this->inputNombre->Name = L"inputNombre";
-            this->inputNombre->Size = System::Drawing::Size(353, 30);
-            this->inputNombre->TabIndex = 13;
-            // 
-            // labelCantidad
-            // 
-            this->labelCantidad->AutoSize = true;
-            this->labelCantidad->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->labelCantidad->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->labelCantidad->Location = System::Drawing::Point(429, 92);
-            this->labelCantidad->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->labelCantidad->Name = L"labelCantidad";
-            this->labelCantidad->Size = System::Drawing::Size(88, 22);
-            this->labelCantidad->TabIndex = 19;
-            this->labelCantidad->Text = L"Cantidad";
-            // 
-            // buttonAgregar
-            // 
-            this->buttonAgregar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)), static_cast<System::Int32>(static_cast<System::Byte>(98)),
-                static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->buttonAgregar->FlatAppearance->BorderSize = 0;
-            this->buttonAgregar->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
-                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
-            this->buttonAgregar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
-                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
-            this->buttonAgregar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->buttonAgregar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->buttonAgregar->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->buttonAgregar->Location = System::Drawing::Point(13, 206);
-            this->buttonAgregar->Margin = System::Windows::Forms::Padding(4);
-            this->buttonAgregar->Name = L"buttonAgregar";
-            this->buttonAgregar->Size = System::Drawing::Size(353, 39);
-            this->buttonAgregar->TabIndex = 21;
-            this->buttonAgregar->Text = L"+";
-            this->buttonAgregar->UseVisualStyleBackColor = false;
-            // 
-            // buttonEliminar
-            // 
-            this->buttonEliminar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-                static_cast<System::Int32>(static_cast<System::Byte>(23)));
-            this->buttonEliminar->FlatAppearance->BorderSize = 0;
-            this->buttonEliminar->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
-                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
-            this->buttonEliminar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
-                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
-            this->buttonEliminar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->buttonEliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->buttonEliminar->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->buttonEliminar->Location = System::Drawing::Point(433, 206);
-            this->buttonEliminar->Margin = System::Windows::Forms::Padding(4);
-            this->buttonEliminar->Name = L"buttonEliminar";
-            this->buttonEliminar->Size = System::Drawing::Size(353, 39);
-            this->buttonEliminar->TabIndex = 22;
-            this->buttonEliminar->Text = L"-";
-            this->buttonEliminar->UseVisualStyleBackColor = false;
             // 
             // dataGridStock
             // 
@@ -1222,19 +1132,12 @@ public:
             this->dataGridStock->Size = System::Drawing::Size(794, 244);
             this->dataGridStock->TabIndex = 23;
             // 
-            // Column4
+            // Column1
             // 
-            this->Column4->HeaderText = L"Cantidad";
-            this->Column4->MinimumWidth = 6;
-            this->Column4->Name = L"Column4";
-            this->Column4->ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this->Column3->HeaderText = L"Precio";
-            this->Column3->MinimumWidth = 6;
-            this->Column3->Name = L"Column3";
-            this->Column3->ReadOnly = true;
+            this->Column1->HeaderText = L"ID Producto";
+            this->Column1->MinimumWidth = 6;
+            this->Column1->Name = L"Column1";
+            this->Column1->ReadOnly = true;
             // 
             // Column2
             // 
@@ -1243,12 +1146,169 @@ public:
             this->Column2->Name = L"Column2";
             this->Column2->ReadOnly = true;
             // 
-            // Column1
+            // Column3
             // 
-            this->Column1->HeaderText = L"ID Producto";
-            this->Column1->MinimumWidth = 6;
-            this->Column1->Name = L"Column1";
-            this->Column1->ReadOnly = true;
+            this->Column3->HeaderText = L"Precio";
+            this->Column3->MinimumWidth = 6;
+            this->Column3->Name = L"Column3";
+            this->Column3->ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this->Column4->HeaderText = L"Cantidad";
+            this->Column4->MinimumWidth = 6;
+            this->Column4->Name = L"Column4";
+            this->Column4->ReadOnly = true;
+            // 
+            // inputNombre
+            // 
+            this->inputNombre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputNombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputNombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputNombre->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputNombre->Location = System::Drawing::Point(13, 118);
+            this->inputNombre->Margin = System::Windows::Forms::Padding(4);
+            this->inputNombre->Name = L"inputNombre";
+            this->inputNombre->Size = System::Drawing::Size(353, 30);
+            this->inputNombre->TabIndex = 13;
+            // 
+            // inputPrecio
+            // 
+            this->inputPrecio->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputPrecio->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputPrecio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputPrecio->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputPrecio->Location = System::Drawing::Point(433, 48);
+            this->inputPrecio->Margin = System::Windows::Forms::Padding(4);
+            this->inputPrecio->Name = L"inputPrecio";
+            this->inputPrecio->Size = System::Drawing::Size(353, 30);
+            this->inputPrecio->TabIndex = 14;
+            // 
+            // inputCantidad
+            // 
+            this->inputCantidad->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputCantidad->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputCantidad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputCantidad->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputCantidad->Location = System::Drawing::Point(433, 118);
+            this->inputCantidad->Margin = System::Windows::Forms::Padding(4);
+            this->inputCantidad->Name = L"inputCantidad";
+            this->inputCantidad->Size = System::Drawing::Size(353, 30);
+            this->inputCantidad->TabIndex = 15;
+            // 
+            // inputIdProducto
+            // 
+            this->inputIdProducto->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+                static_cast<System::Int32>(static_cast<System::Byte>(45)));
+            this->inputIdProducto->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->inputIdProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputIdProducto->ForeColor = System::Drawing::SystemColors::Window;
+            this->inputIdProducto->Location = System::Drawing::Point(13, 48);
+            this->inputIdProducto->Margin = System::Windows::Forms::Padding(4);
+            this->inputIdProducto->Name = L"inputIdProducto";
+            this->inputIdProducto->Size = System::Drawing::Size(353, 30);
+            this->inputIdProducto->TabIndex = 12;
+            // 
+            // buttonEliminar
+            // 
+            this->buttonEliminar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)));
+            this->buttonEliminar->FlatAppearance->BorderSize = 0;
+            this->buttonEliminar->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
+                static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
+            this->buttonEliminar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
+                static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
+            this->buttonEliminar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonEliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->buttonEliminar->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonEliminar->Location = System::Drawing::Point(433, 206);
+            this->buttonEliminar->Margin = System::Windows::Forms::Padding(4);
+            this->buttonEliminar->Name = L"buttonEliminar";
+            this->buttonEliminar->Size = System::Drawing::Size(353, 39);
+            this->buttonEliminar->TabIndex = 22;
+            this->buttonEliminar->Text = L"-";
+            this->buttonEliminar->UseVisualStyleBackColor = false;
+            // 
+            // buttonAgregar
+            // 
+            this->buttonAgregar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)), static_cast<System::Int32>(static_cast<System::Byte>(98)),
+                static_cast<System::Int32>(static_cast<System::Byte>(51)));
+            this->buttonAgregar->FlatAppearance->BorderSize = 0;
+            this->buttonAgregar->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
+                static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
+            this->buttonAgregar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->buttonAgregar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonAgregar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->buttonAgregar->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonAgregar->Location = System::Drawing::Point(13, 206);
+            this->buttonAgregar->Margin = System::Windows::Forms::Padding(4);
+            this->buttonAgregar->Name = L"buttonAgregar";
+            this->buttonAgregar->Size = System::Drawing::Size(353, 39);
+            this->buttonAgregar->TabIndex = 21;
+            this->buttonAgregar->Text = L"+";
+            this->buttonAgregar->UseVisualStyleBackColor = false;
+            // 
+            // labelCantidad
+            // 
+            this->labelCantidad->AutoSize = true;
+            this->labelCantidad->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->labelCantidad->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelCantidad->Location = System::Drawing::Point(429, 92);
+            this->labelCantidad->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelCantidad->Name = L"labelCantidad";
+            this->labelCantidad->Size = System::Drawing::Size(88, 22);
+            this->labelCantidad->TabIndex = 19;
+            this->labelCantidad->Text = L"Cantidad";
+            // 
+            // labelNombre
+            // 
+            this->labelNombre->AutoSize = true;
+            this->labelNombre->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->labelNombre->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelNombre->Location = System::Drawing::Point(9, 92);
+            this->labelNombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelNombre->Name = L"labelNombre";
+            this->labelNombre->Size = System::Drawing::Size(79, 22);
+            this->labelNombre->TabIndex = 17;
+            this->labelNombre->Text = L"Nombre";
+            // 
+            // labelPrecio
+            // 
+            this->labelPrecio->AutoSize = true;
+            this->labelPrecio->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->labelPrecio->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelPrecio->Location = System::Drawing::Point(429, 22);
+            this->labelPrecio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelPrecio->Name = L"labelPrecio";
+            this->labelPrecio->Size = System::Drawing::Size(66, 22);
+            this->labelPrecio->TabIndex = 15;
+            this->labelPrecio->Text = L"Precio";
+            // 
+            // labelIdProducto
+            // 
+            this->labelIdProducto->AutoSize = true;
+            this->labelIdProducto->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->labelIdProducto->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->labelIdProducto->Location = System::Drawing::Point(9, 22);
+            this->labelIdProducto->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->labelIdProducto->Name = L"labelIdProducto";
+            this->labelIdProducto->Size = System::Drawing::Size(115, 22);
+            this->labelIdProducto->TabIndex = 13;
+            this->labelIdProducto->Text = L"ID Producto";
             // 
             // tabControl1
             // 
@@ -1271,9 +1331,9 @@ public:
             // 
             this->tabEmpleado->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(30)));
-            this->tabEmpleado->Controls->Add(this->dataGridView2);
-            this->tabEmpleado->Controls->Add(this->button3);
-            this->tabEmpleado->Controls->Add(this->button4);
+            this->tabEmpleado->Controls->Add(this->dataGridEmpleado);
+            this->tabEmpleado->Controls->Add(this->buttonEliminarEmpleado);
+            this->tabEmpleado->Controls->Add(this->buttonAgregarEmpleado);
             this->tabEmpleado->Controls->Add(this->label8);
             this->tabEmpleado->Controls->Add(this->textBox5);
             this->tabEmpleado->Controls->Add(this->label9);
@@ -1290,16 +1350,16 @@ public:
             this->tabEmpleado->TabIndex = 6;
             this->tabEmpleado->Text = L"Empleado";
             // 
-            // dataGridView2
+            // dataGridEmpleado
             // 
-            this->dataGridView2->AllowUserToAddRows = false;
-            this->dataGridView2->AllowUserToDeleteRows = false;
-            this->dataGridView2->AllowUserToResizeRows = false;
-            this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-            this->dataGridView2->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+            this->dataGridEmpleado->AllowUserToAddRows = false;
+            this->dataGridEmpleado->AllowUserToDeleteRows = false;
+            this->dataGridEmpleado->AllowUserToResizeRows = false;
+            this->dataGridEmpleado->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+            this->dataGridEmpleado->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
-            this->dataGridView2->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-            this->dataGridView2->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+            this->dataGridEmpleado->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+            this->dataGridEmpleado->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
             dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
             dataGridViewCellStyle7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
@@ -1309,20 +1369,20 @@ public:
             dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
             dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::Window;
             dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this->dataGridView2->ColumnHeadersHeight = 30;
-            this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+            this->dataGridEmpleado->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this->dataGridEmpleado->ColumnHeadersHeight = 30;
+            this->dataGridEmpleado->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
                 this->dataGridViewTextBoxColumn5,
                     this->dataGridViewTextBoxColumn6, this->dataGridViewTextBoxColumn7, this->dataGridViewTextBoxColumn8
             });
-            this->dataGridView2->Dock = System::Windows::Forms::DockStyle::Bottom;
-            this->dataGridView2->EnableHeadersVisualStyles = false;
-            this->dataGridView2->GridColor = System::Drawing::SystemColors::Control;
-            this->dataGridView2->Location = System::Drawing::Point(3, 274);
-            this->dataGridView2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->dataGridView2->Name = L"dataGridView2";
-            this->dataGridView2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-            this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+            this->dataGridEmpleado->Dock = System::Windows::Forms::DockStyle::Bottom;
+            this->dataGridEmpleado->EnableHeadersVisualStyles = false;
+            this->dataGridEmpleado->GridColor = System::Drawing::SystemColors::Control;
+            this->dataGridEmpleado->Location = System::Drawing::Point(3, 274);
+            this->dataGridEmpleado->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->dataGridEmpleado->Name = L"dataGridEmpleado";
+            this->dataGridEmpleado->RightToLeft = System::Windows::Forms::RightToLeft::No;
+            this->dataGridEmpleado->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
             dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
             dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
             dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -1331,53 +1391,81 @@ public:
             dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
             dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
             dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView2->RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this->dataGridView2->RowHeadersWidth = 51;
-            this->dataGridView2->RowTemplate->Height = 24;
-            this->dataGridView2->Size = System::Drawing::Size(794, 244);
-            this->dataGridView2->TabIndex = 23;
+            this->dataGridEmpleado->RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this->dataGridEmpleado->RowHeadersWidth = 51;
+            this->dataGridEmpleado->RowTemplate->Height = 24;
+            this->dataGridEmpleado->Size = System::Drawing::Size(794, 244);
+            this->dataGridEmpleado->TabIndex = 23;
             // 
-            // button3
+            // dataGridViewTextBoxColumn5
             // 
-            this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-                static_cast<System::Int32>(static_cast<System::Byte>(23)));
-            this->button3->FlatAppearance->BorderSize = 0;
-            this->button3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
+            this->dataGridViewTextBoxColumn5->HeaderText = L"ID Empleado";
+            this->dataGridViewTextBoxColumn5->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
+            this->dataGridViewTextBoxColumn5->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this->dataGridViewTextBoxColumn6->HeaderText = L"Nombre";
+            this->dataGridViewTextBoxColumn6->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
+            this->dataGridViewTextBoxColumn6->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this->dataGridViewTextBoxColumn7->HeaderText = L"Apellido";
+            this->dataGridViewTextBoxColumn7->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn7->Name = L"dataGridViewTextBoxColumn7";
+            this->dataGridViewTextBoxColumn7->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this->dataGridViewTextBoxColumn8->HeaderText = L"DNI";
+            this->dataGridViewTextBoxColumn8->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
+            this->dataGridViewTextBoxColumn8->ReadOnly = true;
+            // 
+            // buttonEliminarEmpleado
+            // 
+            this->buttonEliminarEmpleado->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)));
+            this->buttonEliminarEmpleado->FlatAppearance->BorderSize = 0;
+            this->buttonEliminarEmpleado->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
                 static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
-            this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
+            this->buttonEliminarEmpleado->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
                 static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
-            this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button3->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button3->Location = System::Drawing::Point(433, 206);
-            this->button3->Margin = System::Windows::Forms::Padding(4);
-            this->button3->Name = L"button3";
-            this->button3->Size = System::Drawing::Size(353, 39);
-            this->button3->TabIndex = 22;
-            this->button3->Text = L"-";
-            this->button3->UseVisualStyleBackColor = false;
+            this->buttonEliminarEmpleado->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonEliminarEmpleado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->buttonEliminarEmpleado->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonEliminarEmpleado->Location = System::Drawing::Point(433, 206);
+            this->buttonEliminarEmpleado->Margin = System::Windows::Forms::Padding(4);
+            this->buttonEliminarEmpleado->Name = L"buttonEliminarEmpleado";
+            this->buttonEliminarEmpleado->Size = System::Drawing::Size(353, 39);
+            this->buttonEliminarEmpleado->TabIndex = 22;
+            this->buttonEliminarEmpleado->Text = L"-";
+            this->buttonEliminarEmpleado->UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonAgregarEmpleado
             // 
-            this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)), static_cast<System::Int32>(static_cast<System::Byte>(98)),
-                static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button4->FlatAppearance->BorderSize = 0;
-            this->button4->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
+            this->buttonAgregarEmpleado->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+            this->buttonAgregarEmpleado->FlatAppearance->BorderSize = 0;
+            this->buttonAgregarEmpleado->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
                 static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
-            this->button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+            this->buttonAgregarEmpleado->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
                 static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
-            this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->buttonAgregarEmpleado->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonAgregarEmpleado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button4->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button4->Location = System::Drawing::Point(13, 206);
-            this->button4->Margin = System::Windows::Forms::Padding(4);
-            this->button4->Name = L"button4";
-            this->button4->Size = System::Drawing::Size(353, 39);
-            this->button4->TabIndex = 21;
-            this->button4->Text = L"+";
-            this->button4->UseVisualStyleBackColor = false;
+            this->buttonAgregarEmpleado->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonAgregarEmpleado->Location = System::Drawing::Point(13, 206);
+            this->buttonAgregarEmpleado->Margin = System::Windows::Forms::Padding(4);
+            this->buttonAgregarEmpleado->Name = L"buttonAgregarEmpleado";
+            this->buttonAgregarEmpleado->Size = System::Drawing::Size(353, 39);
+            this->buttonAgregarEmpleado->TabIndex = 21;
+            this->buttonAgregarEmpleado->Text = L"+";
+            this->buttonAgregarEmpleado->UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -1491,9 +1579,9 @@ public:
             // 
             this->tabProveedores->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(30)));
-            this->tabProveedores->Controls->Add(this->dataGridView3);
-            this->tabProveedores->Controls->Add(this->button5);
-            this->tabProveedores->Controls->Add(this->button6);
+            this->tabProveedores->Controls->Add(this->dataGridProveedores);
+            this->tabProveedores->Controls->Add(this->buttonEliminarProveedores);
+            this->tabProveedores->Controls->Add(this->buttonAgregarProveedores);
             this->tabProveedores->Controls->Add(this->label12);
             this->tabProveedores->Controls->Add(this->textBox9);
             this->tabProveedores->Controls->Add(this->label13);
@@ -1510,16 +1598,16 @@ public:
             this->tabProveedores->TabIndex = 7;
             this->tabProveedores->Text = L"Proveedores";
             // 
-            // dataGridView3
+            // dataGridProveedores
             // 
-            this->dataGridView3->AllowUserToAddRows = false;
-            this->dataGridView3->AllowUserToDeleteRows = false;
-            this->dataGridView3->AllowUserToResizeRows = false;
-            this->dataGridView3->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-            this->dataGridView3->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+            this->dataGridProveedores->AllowUserToAddRows = false;
+            this->dataGridProveedores->AllowUserToDeleteRows = false;
+            this->dataGridProveedores->AllowUserToResizeRows = false;
+            this->dataGridProveedores->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+            this->dataGridProveedores->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
                 static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
-            this->dataGridView3->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-            this->dataGridView3->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+            this->dataGridProveedores->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+            this->dataGridProveedores->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
             dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
             dataGridViewCellStyle9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
                 static_cast<System::Int32>(static_cast<System::Byte>(45)));
@@ -1529,20 +1617,20 @@ public:
             dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
             dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::Window;
             dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this->dataGridView3->ColumnHeadersHeight = 30;
-            this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+            this->dataGridProveedores->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this->dataGridProveedores->ColumnHeadersHeight = 30;
+            this->dataGridProveedores->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
                 this->dataGridViewTextBoxColumn9,
                     this->dataGridViewTextBoxColumn10, this->dataGridViewTextBoxColumn11, this->dataGridViewTextBoxColumn12
             });
-            this->dataGridView3->Dock = System::Windows::Forms::DockStyle::Bottom;
-            this->dataGridView3->EnableHeadersVisualStyles = false;
-            this->dataGridView3->GridColor = System::Drawing::SystemColors::Control;
-            this->dataGridView3->Location = System::Drawing::Point(3, 274);
-            this->dataGridView3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->dataGridView3->Name = L"dataGridView3";
-            this->dataGridView3->RightToLeft = System::Windows::Forms::RightToLeft::No;
-            this->dataGridView3->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+            this->dataGridProveedores->Dock = System::Windows::Forms::DockStyle::Bottom;
+            this->dataGridProveedores->EnableHeadersVisualStyles = false;
+            this->dataGridProveedores->GridColor = System::Drawing::SystemColors::Control;
+            this->dataGridProveedores->Location = System::Drawing::Point(3, 274);
+            this->dataGridProveedores->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->dataGridProveedores->Name = L"dataGridProveedores";
+            this->dataGridProveedores->RightToLeft = System::Windows::Forms::RightToLeft::No;
+            this->dataGridProveedores->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
             dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
             dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
             dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
@@ -1551,53 +1639,81 @@ public:
             dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
             dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
             dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-            this->dataGridView3->RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this->dataGridView3->RowHeadersWidth = 51;
-            this->dataGridView3->RowTemplate->Height = 24;
-            this->dataGridView3->Size = System::Drawing::Size(794, 244);
-            this->dataGridView3->TabIndex = 23;
+            this->dataGridProveedores->RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this->dataGridProveedores->RowHeadersWidth = 51;
+            this->dataGridProveedores->RowTemplate->Height = 24;
+            this->dataGridProveedores->Size = System::Drawing::Size(794, 244);
+            this->dataGridProveedores->TabIndex = 23;
             // 
-            // button5
+            // dataGridViewTextBoxColumn9
             // 
-            this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-                static_cast<System::Int32>(static_cast<System::Byte>(23)));
-            this->button5->FlatAppearance->BorderSize = 0;
-            this->button5->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
+            this->dataGridViewTextBoxColumn9->HeaderText = L"ID Proveedor";
+            this->dataGridViewTextBoxColumn9->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+            this->dataGridViewTextBoxColumn9->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this->dataGridViewTextBoxColumn10->HeaderText = L"Nombre";
+            this->dataGridViewTextBoxColumn10->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
+            this->dataGridViewTextBoxColumn10->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this->dataGridViewTextBoxColumn11->HeaderText = L"Tipo";
+            this->dataGridViewTextBoxColumn11->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn11->Name = L"dataGridViewTextBoxColumn11";
+            this->dataGridViewTextBoxColumn11->ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this->dataGridViewTextBoxColumn12->HeaderText = L"Telefono";
+            this->dataGridViewTextBoxColumn12->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn12->Name = L"dataGridViewTextBoxColumn12";
+            this->dataGridViewTextBoxColumn12->ReadOnly = true;
+            // 
+            // buttonEliminarProveedores
+            // 
+            this->buttonEliminarProveedores->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)));
+            this->buttonEliminarProveedores->FlatAppearance->BorderSize = 0;
+            this->buttonEliminarProveedores->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(149)),
                 static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(55)));
-            this->button5->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
+            this->buttonEliminarProveedores->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(177)),
                 static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(67)));
-            this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button5->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button5->Location = System::Drawing::Point(433, 206);
-            this->button5->Margin = System::Windows::Forms::Padding(4);
-            this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(353, 39);
-            this->button5->TabIndex = 22;
-            this->button5->Text = L"-";
-            this->button5->UseVisualStyleBackColor = false;
+            this->buttonEliminarProveedores->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonEliminarProveedores->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->buttonEliminarProveedores->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonEliminarProveedores->Location = System::Drawing::Point(433, 206);
+            this->buttonEliminarProveedores->Margin = System::Windows::Forms::Padding(4);
+            this->buttonEliminarProveedores->Name = L"buttonEliminarProveedores";
+            this->buttonEliminarProveedores->Size = System::Drawing::Size(353, 39);
+            this->buttonEliminarProveedores->TabIndex = 22;
+            this->buttonEliminarProveedores->Text = L"-";
+            this->buttonEliminarProveedores->UseVisualStyleBackColor = false;
             // 
-            // button6
+            // buttonAgregarProveedores
             // 
-            this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)), static_cast<System::Int32>(static_cast<System::Byte>(98)),
-                static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button6->FlatAppearance->BorderSize = 0;
-            this->button6->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
+            this->buttonAgregarProveedores->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(17)),
+                static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+            this->buttonAgregarProveedores->FlatAppearance->BorderSize = 0;
+            this->buttonAgregarProveedores->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)),
                 static_cast<System::Int32>(static_cast<System::Byte>(82)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
-            this->button6->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+            this->buttonAgregarProveedores->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
                 static_cast<System::Int32>(static_cast<System::Byte>(133)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
-            this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button6->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->button6->Location = System::Drawing::Point(13, 206);
-            this->button6->Margin = System::Windows::Forms::Padding(4);
-            this->button6->Name = L"button6";
-            this->button6->Size = System::Drawing::Size(353, 39);
-            this->button6->TabIndex = 21;
-            this->button6->Text = L"+";
-            this->button6->UseVisualStyleBackColor = false;
+            this->buttonAgregarProveedores->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->buttonAgregarProveedores->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->buttonAgregarProveedores->ForeColor = System::Drawing::SystemColors::ControlLight;
+            this->buttonAgregarProveedores->Location = System::Drawing::Point(13, 206);
+            this->buttonAgregarProveedores->Margin = System::Windows::Forms::Padding(4);
+            this->buttonAgregarProveedores->Name = L"buttonAgregarProveedores";
+            this->buttonAgregarProveedores->Size = System::Drawing::Size(353, 39);
+            this->buttonAgregarProveedores->TabIndex = 21;
+            this->buttonAgregarProveedores->Text = L"+";
+            this->buttonAgregarProveedores->UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -1707,110 +1823,6 @@ public:
             this->textBox12->Size = System::Drawing::Size(353, 30);
             this->textBox12->TabIndex = 12;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this->dataGridViewTextBoxColumn1->HeaderText = L"ID Cliente";
-            this->dataGridViewTextBoxColumn1->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
-            this->dataGridViewTextBoxColumn1->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this->dataGridViewTextBoxColumn2->HeaderText = L"Nombre completo";
-            this->dataGridViewTextBoxColumn2->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
-            this->dataGridViewTextBoxColumn2->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this->dataGridViewTextBoxColumn3->HeaderText = L"DNI";
-            this->dataGridViewTextBoxColumn3->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
-            this->dataGridViewTextBoxColumn3->ReadOnly = true;
-            // 
-            // textBox3
-            // 
-            this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
-                static_cast<System::Int32>(static_cast<System::Byte>(45)));
-            this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->textBox3->ForeColor = System::Drawing::SystemColors::Window;
-            this->textBox3->Location = System::Drawing::Point(433, 118);
-            this->textBox3->Margin = System::Windows::Forms::Padding(4);
-            this->textBox3->Name = L"textBox3";
-            this->textBox3->Size = System::Drawing::Size(353, 30);
-            this->textBox3->TabIndex = 24;
-            // 
-            // label4
-            // 
-            this->label4->AutoSize = true;
-            this->label4->Font = (gcnew System::Drawing::Font(L"Liberation Sans", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label4->ForeColor = System::Drawing::SystemColors::ControlLight;
-            this->label4->Location = System::Drawing::Point(429, 92);
-            this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label4->Name = L"label4";
-            this->label4->Size = System::Drawing::Size(79, 22);
-            this->label4->TabIndex = 25;
-            this->label4->Text = L"Apellido";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this->dataGridViewTextBoxColumn9->HeaderText = L"ID Proveedor";
-            this->dataGridViewTextBoxColumn9->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
-            this->dataGridViewTextBoxColumn9->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this->dataGridViewTextBoxColumn10->HeaderText = L"Nombre";
-            this->dataGridViewTextBoxColumn10->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
-            this->dataGridViewTextBoxColumn10->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this->dataGridViewTextBoxColumn11->HeaderText = L"Tipo";
-            this->dataGridViewTextBoxColumn11->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn11->Name = L"dataGridViewTextBoxColumn11";
-            this->dataGridViewTextBoxColumn11->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this->dataGridViewTextBoxColumn12->HeaderText = L"Telefono";
-            this->dataGridViewTextBoxColumn12->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn12->Name = L"dataGridViewTextBoxColumn12";
-            this->dataGridViewTextBoxColumn12->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this->dataGridViewTextBoxColumn5->HeaderText = L"ID Empleado";
-            this->dataGridViewTextBoxColumn5->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
-            this->dataGridViewTextBoxColumn5->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this->dataGridViewTextBoxColumn6->HeaderText = L"Nombre";
-            this->dataGridViewTextBoxColumn6->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
-            this->dataGridViewTextBoxColumn6->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this->dataGridViewTextBoxColumn7->HeaderText = L"Apellido";
-            this->dataGridViewTextBoxColumn7->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn7->Name = L"dataGridViewTextBoxColumn7";
-            this->dataGridViewTextBoxColumn7->ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this->dataGridViewTextBoxColumn8->HeaderText = L"DNI";
-            this->dataGridViewTextBoxColumn8->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-            this->dataGridViewTextBoxColumn8->ReadOnly = true;
-            // 
             // FormMain
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1823,7 +1835,7 @@ public:
             this->Text = L"FormMain";
             this->tabClientes->ResumeLayout(false);
             this->tabClientes->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridClientes))->EndInit();
             this->tabFacturacion->ResumeLayout(false);
             this->tabFacturacion->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridFacturacion))->EndInit();
@@ -1833,10 +1845,10 @@ public:
             this->tabControl1->ResumeLayout(false);
             this->tabEmpleado->ResumeLayout(false);
             this->tabEmpleado->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridEmpleado))->EndInit();
             this->tabProveedores->ResumeLayout(false);
             this->tabProveedores->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridProveedores))->EndInit();
             this->ResumeLayout(false);
 
         }
