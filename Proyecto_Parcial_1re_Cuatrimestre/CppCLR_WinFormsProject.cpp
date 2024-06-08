@@ -3,6 +3,7 @@
 #include "FormRegister.h"
 #include "FormMain.h"
 #include "user.h"
+#include "cmath"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -220,8 +221,8 @@ public:
 			int cantidad = Convert::ToInt32(this->formMain->inputCantidadFacturacion->Text);
 
 			if (precio >= 0 && cantidad >= 0) {
-				this->subtotal += (precio * cantidad);
-				this->total += (precio * cantidad);
+				this->subtotal = this->redondear(this->subtotal + (cantidad * precio), 2);
+				this->total = this->redondear(this->total + (cantidad * precio), 2);
 				this->actualizarTotalySubtotal();
 			}
 			else this->mensajeFormatoIncorrecto("Facturacion");
@@ -247,8 +248,8 @@ public:
 			int cantidad = Convert::ToInt32(filas_seleccionadas[0]->Cells[2]->Value);
 			double precio = Convert::ToDouble(filas_seleccionadas[0]->Cells[1]->Value);
 
-			this->subtotal -= cantidad * precio;
-			this->total -= cantidad * precio;
+			this->subtotal = this->redondear(this->subtotal - (cantidad * precio), 2);
+			this->total = this->redondear(this->total - (cantidad * precio), 2);
 
 			if (this->total < 0) {
 				this->total = 0;
@@ -266,7 +267,7 @@ public:
 			this->descuento = Convert::ToDouble(this->formMain->inputDescuento->Text);
 
 			if (this->descuento >= 0) {
-				this->total = this->subtotal / 100 * (100 - descuento);
+				this->total = this->redondear(this->subtotal / 100 * (100 - descuento), 2);
 				this->actualizarTotalySubtotal();
 			}
 			return;
@@ -290,6 +291,14 @@ public:
 		MessageBox::Show("Los datos ingresados no son del tipo correcto", ventana);
 	}
 
+	double redondear(double valor, int lugares) {
+		if (lugares < 0) return 0.0;
+
+		double factor = std::pow(10.0, lugares);
+		valor = valor * factor;
+		valor = std::round(valor);
+		return valor / factor;
+	}
 };
 
 
