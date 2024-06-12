@@ -21,6 +21,7 @@ namespace CppCLRWinFormsProject {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+            this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 		}
 
 	protected:
@@ -146,18 +147,7 @@ public: System::Windows::Forms::Button^ buttonAgregarEmpleado;
     private: System::Windows::Forms::TabPage^ tabProveedores;
 public: System::Windows::Forms::DataGridView^ dataGridProveedores;
 public: System::Windows::Forms::Button^ buttonEliminarProveedores;
-private:
-    public:
-
-    private:
-
-    public:
-
-
-
-
 public: System::Windows::Forms::Button^ buttonAgregarProveedores;
-    private:
 
     private: System::Windows::Forms::Label^ label12;
     public:
@@ -188,138 +178,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn11;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn12;
-    private:
-
-
-
-
-	protected:
-
-
-
-
-	private:
-
-
-
-
-	public:
-
-
-	private:
-
-
-
-	private:
-	public:
-	private:
-
-	public:
-
-
-
-
-
-
-
-
-
-
-	public:
-
-
-
-
-
-
-	private:
-
-
-
-
-
-
-	private:
-	public:
-	private:
-	public:
-	private:
-
-	public:
-
-
-	public:
-
-
-
-
-
-
-	private:
-	public:
-	private:
-	public:
-	private:
-
-	public:
-
-	private:
-
-	public:
-
-
-
-
-
-public:
-
-
-
-
-
-
-private:
-public:
-
-private:
-
-public:
-
-
-
-public:
-
-
-private:
-
-private:
-
-private:
-
-public:
-
-
-
-
-
-
-
-public:
-
-
-
-
-	private:
-	private:
-
-	private:
-	public:
-	private:
-
-	public:
-
-	private:
-	private:
 
 	private:
 		/// <summary>

@@ -1,3 +1,6 @@
 ﻿  CppCLR_WinFormsProject.cpp
+  FormMain.cpp
+  FormRegister.cpp
+  Generando código...
   AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Proyecto_Parcial_1re_Cuatrimestre.vcxproj -> C:\Users\Martin\Desktop\Programming\C++\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.exe
+  Proyecto_Parcial_1re_Cuatrimestre.vcxproj -> C:\Users\marti\Escritorio\Code\C++\Proyecto_Parcial_1re_Cuatrimestre\x64\Debug\Proyecto_Parcial_1re_Cuatrimestre.exe

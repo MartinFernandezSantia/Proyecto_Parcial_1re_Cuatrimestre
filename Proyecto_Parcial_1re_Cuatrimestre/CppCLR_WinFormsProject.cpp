@@ -58,10 +58,6 @@ public:
 		this->formMain->buttonAgregarProveedores->Click += gcnew System::EventHandler(this, &Controller::agregarProveedores);
 		this->formMain->buttonEliminarProveedores->Click += gcnew System::EventHandler(this, &Controller::eliminarProveedores);
 
-
-		//Usuario hardcodeado
-		usuario = gcnew User("Martin", "apellido", 1234, "sector", 123, "direccion", "asd");
-
 		Application::Run(formLogin);
 	}
 
